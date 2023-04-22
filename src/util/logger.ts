@@ -1,12 +1,14 @@
-import { LoggerStrategy } from '@beecode/msh-node-log'
-import { NoLogger } from '@beecode/msh-node-log/lib/no-logger'
+import { LoggerStrategy } from '@beecode/msh-logger'
+import { LoggerStrategyVoid } from '@beecode/msh-logger/lib/logger-strategy/void'
 
-let _logger: LoggerStrategy = new NoLogger()
+const _cache = {
+	logger: new LoggerStrategyVoid(),
+}
 
-export const NodeAppLogger = (logger: LoggerStrategy): void => {
-  _logger = logger
+export const setAppBootLogger = (logger: LoggerStrategy): void => {
+	_cache.logger = logger
 }
 
 export const logger = (): LoggerStrategy => {
-  return _logger
+	return _cache.logger
 }

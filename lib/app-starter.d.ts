@@ -1,14 +1,11 @@
 import { AppFlow } from './app-flow';
-export declare enum AppStarterStatus {
+export declare enum AppStarterStatusMapper {
     STARTED = "started",
     STOPPED = "stopped"
 }
-export declare type AppFlowObjectType<T extends AppFlow = any> = {
-    new (): T;
-};
 export declare class AppStarter {
     protected _flow: AppFlow;
-    protected _status: AppStarterStatus;
+    protected _status: AppStarterStatusMapper;
     constructor(appFlow: AppFlow);
     start(): Promise<void>;
     protected _registerOnExit(): void;
@@ -16,5 +13,4 @@ export declare class AppStarter {
     protected _onError(err: Error): Promise<void>;
     stop(): Promise<void>;
 }
-export declare const appStarterFactory: (appFlow: AppFlowObjectType) => AppStarter;
 //# sourceMappingURL=app-starter.d.ts.map

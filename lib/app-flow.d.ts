@@ -1,6 +1,6 @@
 import { LifeCycle } from './life-cycle';
-export declare type FlowList = (LifeCycle | LifeCycle[])[];
-export declare enum FlowDirection {
+export type FlowList = (LifeCycle | LifeCycle[])[];
+export declare enum FlowDirectionMapper {
     DESTROY = "destroy",
     CREATE = "create"
 }
@@ -12,8 +12,8 @@ export declare abstract class AppFlow {
     protected _topLevelReversedFlowList(): FlowList;
     static DeepExecFlowList(params: {
         flowList: FlowList;
-        direction: FlowDirection;
+        direction: FlowDirectionMapper;
     }): Promise<void>;
-    static ExecSyncFlowList(lifeCycleList: LifeCycle[], createOrDestroy: FlowDirection): Promise<void>;
+    static ExecSyncFlowList(lifeCycleList: LifeCycle[], createOrDestroy: FlowDirectionMapper): Promise<void>;
 }
 //# sourceMappingURL=app-flow.d.ts.map

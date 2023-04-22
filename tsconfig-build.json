@@ -1,14 +1,14 @@
 {
-  "exclude": [
-    "./node_modules",
-    "./lib",
-    "./.idea",
-    "./.semaphore",
-    "./resource",
-    "./**/*.test.ts",
-    "./**/*.contract.ts",
-    "./**/__mocks__/**/*.*",
-    "./test"
-  ],
-  "extends": "./tsconfig.json"
+	"extends": "./tsconfig.json",
+	"include": ["src/**/*.ts"],
+	"exclude": [
+		"node_modules",
+		"**/*.js",
+		"**/*.spec.ts",
+		"**/*.test.ts",
+		"**/__mocks__/**/*",
+		"**/*.test.tsx",
+		"**/__tests__/**/*",
+		"src/test"
+	]
 }

@@ -1,62 +1,60 @@
-import { AppFlow } from './app-flow'
-import { logger } from './util/logger'
+import { AppFlow } from 'src/app-flow'
+import { logger } from 'src/util/logger'
 
-export enum AppStarterStatus {
-  STARTED = 'started',
-  STOPPED = 'stopped',
+export enum AppStarterStatusMapper {
+	STARTED = 'started',
+	STOPPED = 'stopped',
 }
-
-export declare type AppFlowObjectType<T extends AppFlow = any> = { new (): T }
 
 export class AppStarter {
-  protected _flow: AppFlow
-  protected _status: AppStarterStatus = AppStarterStatus.STOPPED
+	protected _flow: AppFlow
+	protected _status: AppStarterStatusMapper = AppStarterStatusMapper.STOPPED
 
-  public constructor(appFlow: AppFlow) {
-    this._flow = appFlow
-  }
+	constructor(appFlow: AppFlow) {
+		this._flow = appFlow
+	}
 
-  public async start(): Promise<void> {
-    try {
-      if (this._status === AppStarterStatus.STARTED) {
-        logger().warn('App already started')
-        return
-      }
-      this._status = AppStarterStatus.STARTED
-      await this._flow.create()
-      this._registerOnExit()
-    } catch (err) {
-      await this._onError(err as Error)
-    }
-  }
+	async start(): Promise<void> {
+		try {
+			if (this._status === AppStarterStatusMapper.STARTED) {
+				logger().warn('App already started')
 
-  protected _registerOnExit(): void {
-    ;['SIGTERM', 'SIGINT'].forEach((signal: string) => {
-      process.on(signal, () => {
-        this._gracefulStop().catch((err) => logger().error(err))
-      })
-    })
-  }
+				return
+			}
+			this._status = AppStarterStatusMapper.STARTED
+			await this._flow.create()
+			this._registerOnExit()
+		} catch (err) {
+			await this._onError(err as Error)
+		}
+	}
 
-  protected async _gracefulStop(): Promise<void> {
-    await this.stop()
-    process.exit(0)
-  }
+	protected _registerOnExit(): void {
+		;['SIGTERM', 'SIGINT'].forEach((signal: string) => {
+			process.on(signal, () => {
+				this._gracefulStop().catch((err) => logger().error(err))
+			})
+		})
+	}
 
-  protected async _onError(err: Error): Promise<void> {
-    logger().error(err.message)
-    await this.stop()
-    process.exit(1)
-  }
+	protected async _gracefulStop(): Promise<void> {
+		await this.stop()
+		process.exit(0)
+	}
 
-  public async stop(): Promise<void> {
-    if (this._status === AppStarterStatus.STOPPED) {
-      logger().warn('App already stopped')
-      return
-    }
-    this._status = AppStarterStatus.STOPPED
-    await this._flow.destroy()
-  }
+	protected async _onError(err: Error): Promise<void> {
+		logger().error(err.message)
+		await this.stop()
+		process.exit(1)
+	}
+
+	async stop(): Promise<void> {
+		if (this._status === AppStarterStatusMapper.STOPPED) {
+			logger().warn('App already stopped')
+
+			return
+		}
+		this._status = AppStarterStatusMapper.STOPPED
+		await this._flow.destroy()
+	}
 }
-
-export const appStarterFactory = (appFlow: AppFlowObjectType): AppStarter => new AppStarter(new appFlow())

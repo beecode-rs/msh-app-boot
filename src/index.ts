@@ -1,4 +1,6 @@
 /* istanbul ignore file */
-export * from './life-cycle'
-export * from './app-flow'
-export * from './app-starter'
+export * from 'src/life-cycle'
+
+export * from 'src/app-flow'
+
+export * from 'src/app-starter'

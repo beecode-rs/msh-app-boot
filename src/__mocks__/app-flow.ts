@@ -1,16 +1,16 @@
-import { FlowList } from '../app-flow'
+import { FlowList } from 'src/app-flow'
 
 export class AppFlow {
-  protected readonly _flowList: FlowList
+	protected readonly _flowList: FlowList
 
-  public get FlowList(): FlowList {
-    return this._flowList
-  }
+	get flowList(): FlowList {
+		return this._flowList
+	}
 
-  protected constructor(...args: FlowList) {
-    this._flowList = [...args]
-  }
+	protected constructor(...args: FlowList) {
+		this._flowList = [...args]
+	}
 
-  public create = jest.fn()
-  public destroy = jest.fn()
+	create = jest.fn()
+	destroy = jest.fn()
 }

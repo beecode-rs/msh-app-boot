@@ -1,3 +1,6 @@
+> # Renamed `msh-node-app` > `msh-app-boot`
+> Reset version to 0.1.0
+
 ## [1.0.4](https://github.com/beecode-rs/msh-node-app/compare/v1.0.3...v1.0.4) (2022-10-16)
 
 

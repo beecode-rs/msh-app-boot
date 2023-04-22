@@ -1,9 +1,9 @@
-[![Build Status](https://beecode.semaphoreci.com/badges/msh-node-app/branches/main.svg?style=shields)](https://beecode.semaphoreci.com/projects/msh-node-app)
-[![codecov](https://codecov.io/gh/beecode-rs/msh-node-app/branch/main/graph/badge.svg?token=JR5ZLHZETH)](https://codecov.io/gh/beecode-rs/msh-node-app)
-[![GitHub license](https://img.shields.io/github/license/beecode-rs/msh-node-app)](https://github.com/beecode-rs/msh-node-app/blob/main/LICENSE)  
-[![NPM](https://nodei.co/npm/@beecode/msh-node-app.png)](https://nodei.co/npm/@beecode/msh-node-app)
+[![Build Status](https://beecode.semaphoreci.com/badges/msh-app-boot/branches/main.svg?style=shields)](https://beecode.semaphoreci.com/projects/msh-app-boot)
+[![codecov](https://codecov.io/gh/beecode-rs/msh-app-boot/branch/main/graph/badge.svg?token=JR5ZLHZETH)](https://codecov.io/gh/beecode-rs/msh-app-boot)
+[![GitHub license](https://img.shields.io/github/license/beecode-rs/msh-app-boot)](https://github.com/beecode-rs/msh-app-boot/blob/main/LICENSE)  
+[![NPM](https://nodei.co/npm/@beecode/msh-app-boot.png)](https://nodei.co/npm/@beecode/msh-app-boot)
 
-# msh-node-app
+# msh-app-boot
 
 Micro-service helper: app initializer
 
@@ -20,7 +20,7 @@ This project is intended to be used in typescript project to help with app initi
 
 ## Install
 
-`npm i @beecode/msh-node-app`
+`npm i @beecode/msh-app-boot`
 
 
 ## Diagram
@@ -36,7 +36,7 @@ After FistInitiable is finished SecondInitiable and ThirdInitiable are run in pa
 
 ```typescript
 // ./initiate/first-initiable.ts
-import { LifeCycle } from '@beecode/msh-node-app'
+import { LifeCycle } from '@beecode/msh-app-boot'
 
 export class FirstInitiable extends LifeCycle {
   constructor() {
@@ -55,7 +55,7 @@ export class FirstInitiable extends LifeCycle {
 
 
 // app.ts
-import { AppFlow } from '@beecode/msh-node-app'
+import { AppFlow } from '@beecode/msh-app-boot'
 
 export class App extends AppFlow {
   public constructor() {
@@ -68,14 +68,14 @@ export class App extends AppFlow {
 import { LogLevelType } from '@beecode/msh-node-log'
 import { ConsoleLogger } from '@beecode/msh-node-log/lib/console-logger'
 
-import { NodeAppLogger } from '@beecode/msh-node-app/lib/util/logger'
+import { NodeAppLogger } from '@beecode/msh-app-boot/lib/util/logger'
 
-import { appStarterFactory } from '@beecode/msh-node-app'
+import { AppStarter } from '@beecode/msh-app-boot'
 import { App } from './app'
 
 NodeAppLogger(new ConsoleLogger({ logLevel: LogLevelType.DEBUG }))
 
-appStarterFactory(App)
+new AppStarter(new App())
   .start()
   .catch((err) => console.log(err)) // eslint-disable-line no-console
 ```

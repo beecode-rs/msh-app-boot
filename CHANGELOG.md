@@ -1,3 +1,10 @@
+# [0.1.0](https://github.com/beecode-rs/msh-app-boot/compare/v0.0.0...v0.1.0) (2023-04-22)
+
+
+### Features
+
+* update project, rename project, reset version ([d7973b6](https://github.com/beecode-rs/msh-app-boot/commit/d7973b6a5cd32bae43e9869a2316574ee07b228a))
+
 > # Renamed `msh-node-app` > `msh-app-boot`
 > Reset version to 0.1.0
 

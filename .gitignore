@@ -4,3 +4,4 @@
 /node_modules
 /packages
 /test/node_modules
+/test/build

@@ -1,6 +1,9 @@
 {
 	"author": "",
-	"dependencies": {},
+	"dependencies": {
+		"@beecode/msh-logger": "0.2.0-alpha",
+		"tsconfig-paths": "4.2.0"
+	},
 	"description": "",
 	"license": "ISC",
 	"main": "jest.config.js",
@@ -9,7 +12,10 @@
 		"@beecode/msh-app-boot": ".."
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"tsc": "tsc -p ./tsconfig.json",
+		"start:ts:basic-example": "ts-node ./src/basic-example/index.ts",
+		"tsc:check": "npm run tsc --noEmit"
 	},
 	"version": "1.0.0"
 }

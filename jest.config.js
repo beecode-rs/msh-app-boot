@@ -1,7 +1,7 @@
 module.exports = {
-	collectCoverage: true,
+	collectCoverage: false,
 	collectCoverageFrom: ['src/**/*.ts', '!src/index.ts', '!src/**/*.{contract,d}.ts'],
-	coveragePathIgnorePatterns: ['/node_modules/', '/__tests__/', '/__mocks__/'],
+	coveragePathIgnorePatterns: ['/node_modules/', '/__tests__/', '/__mocks__/', '/__snapshots__/'],
 	maxConcurrency: 1,
 	moduleNameMapper: {
 		'^src/(.*)$': '<rootDir>/src/$1',

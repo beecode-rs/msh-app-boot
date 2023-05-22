@@ -1,25 +1,21 @@
 {
-	"author": "",
-	"dependencies": {
-		"@beecode/msh-logger": "0.2.0-alpha",
-		"tsconfig-paths": "4.2.0"
-	},
-	"description": "",
-	"engines": {
-		"node": "=18.15.0",
-		"npm": "=9.6.1"
-	},
-	"license": "ISC",
-	"main": "jest.config.js",
-	"name": "test",
-	"optionalDependencies": {
-		"@beecode/msh-app-boot": ".."
-	},
-	"scripts": {
-		"start:ts:basic-example": "ts-node ./src/basic-example/index.ts",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"tsc": "tsc -p ./tsconfig.json",
-		"tsc:check": "npm run tsc -- --noEmit"
-	},
-	"version": "1.0.0"
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "jest.config.js",
+  "scripts": {
+    "start:ts:basic-example": "ts-node ./src/basic-example/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc -p ./tsconfig.json",
+    "tsc:check": "npm run tsc -- --noEmit"
+  },
+  "dependencies": {
+    "@beecode/msh-logger": "0.2.0-alpha",
+    "tsconfig-paths": "4.2.0"
+  },
+  "optionalDependencies": {
+    "@beecode/msh-app-boot": ".."
+  }
 }

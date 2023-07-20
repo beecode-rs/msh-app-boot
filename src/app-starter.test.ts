@@ -1,11 +1,14 @@
-import { AppFlow } from 'src/app-flow'
-import { AppStarter, AppStarterStatusMapper } from 'src/app-starter'
-import { logger } from 'src/util/logger'
+import { jest } from '@jest/globals'
 
-jest.mock('src/util/logger')
+import { AppFlow } from '#/app-flow.js'
+import { AppStarter, AppStarterStatusMapper } from '#/app-starter.js'
+import { logger } from '#/util/logger.js'
+
+jest.mock('#/util/logger')
 jest.mock('src/app-flow')
 
 class DummyAppFlow extends AppFlow {
+	// eslint-disable-next-line @typescript-eslint/no-useless-constructor
 	constructor() {
 		super()
 	}

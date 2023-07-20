@@ -1,7 +1,9 @@
-import { LifeCycle } from 'src/life-cycle'
-import { logger } from 'src/util/logger'
+import { jest } from '@jest/globals'
 
-jest.mock('src/util/logger')
+import { LifeCycle } from '#/life-cycle.js'
+import { logger } from '#/util/logger.js'
+
+jest.mock('#/util/logger')
 
 export class LifeCycleMockImplementation extends LifeCycle {
 	constructor(params: { name: string }) {

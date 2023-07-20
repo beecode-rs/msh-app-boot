@@ -1,5 +1,6 @@
-import { LoggerStrategyVoid } from '@beecode/msh-logger/lib/logger-strategy/void'
-import { logger, setAppBootLogger } from 'src/util/logger'
+import { LoggerStrategyVoid } from '@beecode/msh-logger/logger-strategy/void.js'
+
+import { logger, setAppBootLogger } from '#/util/logger.js'
 
 describe('logger', () => {
 	describe('appBootLogger', () => {

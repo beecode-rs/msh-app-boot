@@ -1,6 +1,7 @@
-import { contractFactory } from '@beecode/msh-test-contractor/lib/contract/contractor-factory'
-import { SpecialFnName } from '@beecode/msh-test-contractor/lib/enum/special-fn-name'
-import * as AppFlow from 'src/app-flow'
+import { contractFactory } from '@beecode/msh-test-contractor/contract/contractor-factory.js'
+import { SpecialFnName } from '@beecode/msh-test-contractor/enum/special-fn-name.js'
+
+import * as AppFlow from '#/app-flow.js'
 
 export const dummyData = Object.freeze({
 	lifeCycleList: [{ init: 1 }, [{ init: 2.1 }, { init: 2.2 }], { init: 3 }],

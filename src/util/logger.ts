@@ -1,5 +1,5 @@
 import { LoggerStrategy } from '@beecode/msh-logger'
-import { LoggerStrategyVoid } from '@beecode/msh-logger/lib/logger-strategy/void'
+import { LoggerStrategyVoid } from '@beecode/msh-logger/logger-strategy/void.js'
 
 const _cache = {
 	logger: new LoggerStrategyVoid(),

@@ -1,4 +1,4 @@
-import { FlowList } from 'src/app-flow'
+import { FlowList } from '#/app-flow.js'
 
 export class AppFlow {
 	protected readonly _flowList: FlowList

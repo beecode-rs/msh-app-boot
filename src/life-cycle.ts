@@ -1,4 +1,4 @@
-import { logger } from '#/util/logger.js'
+import { logger } from 'src/util/logger'
 
 export abstract class LifeCycle<T = any> {
 	protected abstract _createFn(): Promise<T>

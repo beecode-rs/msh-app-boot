@@ -1,4 +1,4 @@
-import { AppFlow } from '#/app-flow.js'
+import { AppFlow } from 'src/app-flow'
 
 class MockAppFlow extends AppFlow {
 	constructor(...flow: (FakeFlow | FakeFlow[])[]) {

@@ -1,5 +1,5 @@
-import { LifeCycle } from '#/life-cycle.js'
-import { logger } from '#/util/logger.js'
+import { LifeCycle } from 'src/life-cycle'
+import { logger } from 'src/util/logger'
 
 export type FlowList = (LifeCycle | LifeCycle[])[]
 

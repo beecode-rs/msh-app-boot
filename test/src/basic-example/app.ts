@@ -1,8 +1,7 @@
-import { AppFlow } from '@beecode/msh-app-boot/lib/app-flow.js'
-
-import { FirstInitiable } from '#/basic-example/initiate/first-initiable'
-import { SecondInitiable } from '#/basic-example/initiate/second-initiable'
-import { ThirdInitiable } from '#/basic-example/initiate/third-initiable'
+import { AppFlow } from '@beecode/msh-app-boot/dist/app-flow'
+import { FirstInitiable } from 'src/basic-example/initiate/first-initiable'
+import { SecondInitiable } from 'src/basic-example/initiate/second-initiable'
+import { ThirdInitiable } from 'src/basic-example/initiate/third-initiable'
 
 export class App extends AppFlow {
 	constructor() {

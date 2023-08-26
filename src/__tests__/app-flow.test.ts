@@ -28,7 +28,7 @@ describe('AppFlow', () => {
 			const fakeFlowList = [fakeFlowFactory()]
 			const appFlow = new MockAppFlow(...fakeFlowList)
 			await appFlow.create()
-			expect(fakeFlowList[0].create).toHaveBeenCalledTimes(1)
+			expect(fakeFlowList[0]?.create).toHaveBeenCalledTimes(1)
 		})
 		it('should call create on all flows', async () => {
 			const flow1 = fakeFlowFactory()
@@ -52,7 +52,7 @@ describe('AppFlow', () => {
 			const fakeFlowList = [fakeFlowFactory()]
 			const appFlow = new MockAppFlow(...fakeFlowList)
 			await appFlow.destroy()
-			expect(fakeFlowList[0].destroy).toHaveBeenCalledTimes(1)
+			expect(fakeFlowList[0]?.destroy).toHaveBeenCalledTimes(1)
 		})
 		it('should call destroy on all flows', async () => {
 			const flow1 = fakeFlowFactory()

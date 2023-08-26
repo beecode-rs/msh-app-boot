@@ -1,4 +1,4 @@
-import { LifeCycle } from '@beecode/msh-app-boot/lib/life-cycle.js'
+import { LifeCycle } from '@beecode/msh-app-boot/dist/life-cycle'
 
 export class SecondInitiable extends LifeCycle {
 	constructor() {

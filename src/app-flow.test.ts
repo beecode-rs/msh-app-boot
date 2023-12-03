@@ -1,9 +1,10 @@
 import { jest } from '@jest/globals'
-import { AppFlow, FlowDirectionMapper } from 'src/app-flow'
-import { LifeCycleMockImplementation } from 'src/life-cycle.test'
-import { logger } from 'src/util/logger'
 
-jest.mock('src/util/logger')
+import { AppFlow, FlowDirectionMapper } from '#/app-flow'
+import { LifeCycleMockImplementation } from '#/life-cycle.test'
+import { logger } from '#/util/logger'
+
+jest.mock('#/util/logger')
 
 export type FlowListMockImplementation = (LifeCycleMockImplementation | LifeCycleMockImplementation[])[]
 

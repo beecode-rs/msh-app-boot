@@ -1,6 +1,6 @@
 /* istanbul ignore file */
-export { LifeCycle } from 'src/life-cycle'
+export { LifeCycle } from '#/life-cycle'
 
-export { AppFlow, FlowList, FlowDirectionMapper } from 'src/app-flow'
+export { AppFlow, FlowList, FlowDirectionMapper } from '#/app-flow'
 
-export { AppStarter, AppStarterStatusMapper } from 'src/app-starter'
+export { AppStarter, AppStarterStatusMapper } from '#/app-starter'

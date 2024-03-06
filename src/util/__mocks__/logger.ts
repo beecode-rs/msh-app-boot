@@ -1,14 +1,18 @@
 import { LoggerStrategy, LoggerStrategyParams } from '@beecode/msh-logger'
 import { jest } from '@jest/globals'
 
-export const _logger: LoggerStrategy = {
-	clone: jest.fn<(params: LoggerStrategyParams) => LoggerStrategy>(),
-	debug: jest.fn<(params: unknown[]) => void>(),
-	error: jest.fn<(params: unknown[]) => void>(),
-	info: jest.fn<(params: unknown[]) => void>(),
-	warn: jest.fn<(params: unknown[]) => void>(),
+const _cache = {
+	logger: {
+		clone: jest.fn<(params: LoggerStrategyParams) => LoggerStrategy>(),
+		debug: jest.fn<(params: unknown[]) => void>(),
+		error: jest.fn<(params: unknown[]) => void>(),
+		info: jest.fn<(params: unknown[]) => void>(),
+		warn: jest.fn<(params: unknown[]) => void>(),
+	},
 }
 
-export const logger = (): LoggerStrategy => {
-	return _logger
-}
+export const setAppBootLogger = jest.fn<(logger: LoggerStrategy) => void>()
+
+export const logger = jest.fn((): LoggerStrategy => {
+	return _cache.logger
+})

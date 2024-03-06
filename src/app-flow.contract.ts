@@ -1,5 +1,5 @@
-import { contractFactory } from '@beecode/msh-test-contractor/dist/contract/contractor-factory'
-import { SpecialFnName } from '@beecode/msh-test-contractor/dist/enum/special-fn-name'
+import { contractFactory } from '@beecode/msh-test-contractor/contract/contractor-factory'
+import { SpecialFnName } from '@beecode/msh-test-contractor/enum/special-fn-name'
 
 import * as AppFlow from '#/app-flow'
 

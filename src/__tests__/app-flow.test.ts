@@ -1,3 +1,5 @@
+import { jest } from '@jest/globals'
+
 import { AppFlow } from '#/app-flow'
 
 class MockAppFlow extends AppFlow {
@@ -18,8 +20,8 @@ describe('AppFlow', () => {
 		return {
 			// eslint-disable-next-line @typescript-eslint/naming-convention
 			_id,
-			create: jest.fn().mockResolvedValue(undefined),
-			destroy: jest.fn().mockResolvedValue(undefined),
+			create: jest.fn().mockImplementation(() => Promise.resolve()),
+			destroy: jest.fn().mockImplementation(() => Promise.resolve()),
 		}
 	}
 

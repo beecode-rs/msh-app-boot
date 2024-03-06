@@ -20,6 +20,7 @@ module.exports = {
 		es6: true,
 		'jest/globals': true,
 		node: true,
+		jest: true
 	},
 	settings: {
 		'import/resolver': {

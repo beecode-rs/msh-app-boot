@@ -1,25 +1,34 @@
 import { jest } from '@jest/globals'
 
-import { LifeCycle } from '#/life-cycle'
+// import { LifeCycle } from '#/life-cycle'
 import { logger } from '#/util/logger'
 
 jest.mock('#/util/logger')
 
-export class LifeCycleMockImplementation extends LifeCycle {
+export class LifeCycleMockImplementation {
+	readonly name: string
+
 	constructor(params: { name: string }) {
-		super(params)
-		this._createFn = jest.fn()
-		this._destroyFn = jest.fn()
+		const { name } = params
+		this.name = name
+
+		this._createFn = jest.fn<() => Promise<string>>()
+		this._destroyFn = jest.fn<() => Promise<string>>()
+		this.create = jest.fn<() => Promise<string>>()
+		this.destroy = jest.fn<() => Promise<string>>()
 	}
 
-	protected _createFn: jest.Mock
-	protected _destroyFn: jest.Mock
+	protected _createFn: jest.Mock<() => Promise<string>>
+	protected _destroyFn: jest.Mock<() => Promise<string>>
 
-	get createFn(): jest.Mock {
+	create: jest.Mock
+	destroy: jest.Mock
+
+	get createFn(): jest.Mock<() => Promise<string>> {
 		return this._createFn
 	}
 
-	get destroyFn(): jest.Mock {
+	get destroyFn(): jest.Mock<() => Promise<string>> {
 		return this._destroyFn
 	}
 }

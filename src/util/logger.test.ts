@@ -1,4 +1,4 @@
-import { LoggerStrategyVoid } from '@beecode/msh-logger/dist/logger-strategy/void'
+import { LoggerStrategyVoid } from '@beecode/msh-logger/logger-strategy/void'
 
 import { logger, setAppBootLogger } from '#/util/logger'
 

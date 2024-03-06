@@ -1,10 +1,27 @@
-import { jest } from '@jest/globals'
+// eslint-disable-next-line
+// @ts-ignore
+// import { logger } from './util/logger'
+// import { jest } from '@jest/globals'
 
 import { AppFlow, FlowDirectionMapper } from '#/app-flow'
 import { LifeCycleMockImplementation } from '#/life-cycle.test'
 import { logger } from '#/util/logger'
+// import { logger } from '#/util/logger'
 
-jest.mock('#/util/logger')
+// jest.mock('#/util/logger')
+// jest.mock('./util/logger')
+// jest.mock('./util/logger', () => ({
+// 	logger: jest.fn(() => ({
+// 		error: jest.fn(),
+// 		// Other logging functions like 'info', 'debug', etc.
+// 	})),
+// }))
+jest.mock('#/util/logger', () => ({
+	logger: jest.fn(() => ({
+		error: jest.fn(),
+		// Other logging functions like 'info', 'debug', etc.
+	})),
+}))
 
 export type FlowListMockImplementation = (LifeCycleMockImplementation | LifeCycleMockImplementation[])[]
 
@@ -49,7 +66,7 @@ describe('AppFlow', () => {
 
 	describe('_topLevelReversedFlowList', () => {
 		it('should call reverse on flowList', () => {
-			const fake_flow = { reverse: jest.fn().mockImplementation() } as any
+			const fake_flow = { reverse: jest.fn().mockImplementation(() => undefined) } as any
 
 			const appFlow = new AppFlowMockImplementation()
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment

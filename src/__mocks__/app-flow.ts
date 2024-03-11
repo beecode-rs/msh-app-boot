@@ -1,3 +1,5 @@
+import { jest } from '@jest/globals'
+
 import { FlowList } from '#/app-flow'
 
 export class AppFlow {

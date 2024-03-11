@@ -1,27 +1,10 @@
-// eslint-disable-next-line
-// @ts-ignore
-// import { logger } from './util/logger'
-// import { jest } from '@jest/globals'
+import { afterEach, describe, expect, it, jest } from '@jest/globals'
 
 import { AppFlow, FlowDirectionMapper } from '#/app-flow'
 import { LifeCycleMockImplementation } from '#/life-cycle.test'
 import { logger } from '#/util/logger'
-// import { logger } from '#/util/logger'
 
-// jest.mock('#/util/logger')
-// jest.mock('./util/logger')
-// jest.mock('./util/logger', () => ({
-// 	logger: jest.fn(() => ({
-// 		error: jest.fn(),
-// 		// Other logging functions like 'info', 'debug', etc.
-// 	})),
-// }))
-jest.mock('#/util/logger', () => ({
-	logger: jest.fn(() => ({
-		error: jest.fn(),
-		// Other logging functions like 'info', 'debug', etc.
-	})),
-}))
+jest.mock('#/util/logger')
 
 export type FlowListMockImplementation = (LifeCycleMockImplementation | LifeCycleMockImplementation[])[]
 
@@ -41,7 +24,7 @@ describe('AppFlow', () => {
 		it('should call _deepExecFlowList', async () => {
 			const flow: any[] | LifeCycleMockImplementation = []
 			const appFlow = new AppFlowMockImplementation(...flow)
-			const spy_deepExecFlowList = jest.spyOn<any, any>(AppFlow, 'DeepExecFlowList').mockImplementation(() => Promise.resolve())
+			const spy_deepExecFlowList = jest.spyOn(AppFlow, 'DeepExecFlowList').mockImplementation(() => Promise.resolve())
 
 			await appFlow.create()
 			expect(spy_deepExecFlowList).toHaveBeenCalledTimes(1)
@@ -54,8 +37,8 @@ describe('AppFlow', () => {
 			const flow: any[] | LifeCycleMockImplementation = []
 			const reversFlow: any[] | LifeCycleMockImplementation = []
 			const appFlow = new AppFlowMockImplementation(...flow)
-			const spy_deepExecFlowList = jest.spyOn<any, any>(AppFlow, 'DeepExecFlowList').mockImplementation(() => Promise.resolve())
-			const spy_topLevelReversedFlowList = jest.spyOn<any, any>(appFlow, '_topLevelReversedFlowList').mockReturnValue(reversFlow)
+			const spy_deepExecFlowList = jest.spyOn(AppFlow, 'DeepExecFlowList').mockImplementation(() => Promise.resolve())
+			const spy_topLevelReversedFlowList = jest.spyOn(appFlow as any, '_topLevelReversedFlowList').mockReturnValue(reversFlow)
 
 			await appFlow.destroy()
 			expect(spy_deepExecFlowList).toHaveBeenCalledTimes(1)
@@ -94,7 +77,7 @@ describe('AppFlow', () => {
 	describe('DeepExecFlowList', () => {
 		it('should not call ExecSyncFlowList if flow empty', async () => {
 			const flow = [] as any[]
-			const spy_execSyncFlowList = jest.spyOn<any, any>(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
+			const spy_execSyncFlowList = jest.spyOn(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
 
 			await AppFlow.DeepExecFlowList({ direction: FlowDirectionMapper.DESTROY, flowList: flow })
 
@@ -104,7 +87,7 @@ describe('AppFlow', () => {
 		it('should not call ExecSyncFlowList if flow has no arrays', async () => {
 			const fakeLifeCycle1 = { destroy: jest.fn() }
 			const flow = [fakeLifeCycle1] as any[]
-			const spy_execSyncFlowList = jest.spyOn<any, any>(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
+			const spy_execSyncFlowList = jest.spyOn(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
 
 			await AppFlow.DeepExecFlowList({ direction: FlowDirectionMapper.DESTROY, flowList: flow })
 
@@ -118,7 +101,7 @@ describe('AppFlow', () => {
 
 			const flow = [[fakeLifeCycle1, fakeLifeCycle2]] as any[]
 
-			const spy_execSyncFlowList = jest.spyOn<any, any>(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
+			const spy_execSyncFlowList = jest.spyOn(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
 			await AppFlow.DeepExecFlowList({ direction: FlowDirectionMapper.DESTROY, flowList: flow })
 
 			expect(spy_execSyncFlowList).toHaveBeenCalledTimes(1)
@@ -126,9 +109,9 @@ describe('AppFlow', () => {
 
 		it('should log end throw error if lifeCycle fails', async () => {
 			const lifeCycleError = new Error('boom')
-			const fakeLifeCycle1 = { destroy: jest.fn().mockRejectedValue(lifeCycleError) }
+			const fakeLifeCycle1 = { destroy: jest.fn<any>().mockRejectedValue(lifeCycleError) }
 			const flow = [fakeLifeCycle1] as any[]
-			const spy_execSyncFlowList = jest.spyOn<any, any>(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
+			const spy_execSyncFlowList = jest.spyOn(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
 
 			try {
 				await AppFlow.DeepExecFlowList({ direction: FlowDirectionMapper.DESTROY, flowList: flow })

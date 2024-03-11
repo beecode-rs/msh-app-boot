@@ -10,7 +10,7 @@ const jestConfig: JestConfigWithTsJest = {
 		'^#/(.*)$': '<rootDir>/src/$1',
 	},
 	preset: 'ts-jest/presets/default-esm',
-	setupFilesAfterEnv: ['jest-extended/all'],
+	setupFilesAfterEnv: ['jest-extended/all', '<rootDir>/src/index-jest-setup.ts'],
 	testEnvironment: 'node',
 	testMatch: ['<rootDir>/src/**/*.(spec|test).[jt]s?(x)'],
 	testPathIgnorePatterns: ['/node_modules/'],

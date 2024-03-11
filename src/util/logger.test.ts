@@ -1,4 +1,5 @@
 import { LoggerStrategyVoid } from '@beecode/msh-logger/logger-strategy/void'
+import { describe, expect, it } from '@jest/globals'
 
 import { logger, setAppBootLogger } from '#/util/logger'
 

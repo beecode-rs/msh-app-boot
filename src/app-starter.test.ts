@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
-import { AppFlow } from '#/app-flow'
-import { AppStarter, AppStarterStatusMapper } from '#/app-starter'
-import { logger } from '#/util/logger'
+import { AppFlow } from '#src/app-flow'
+import { AppStarter, AppStarterStatusMapper } from '#src/app-starter'
+import { logger } from '#src/util/logger'
 
 jest.mock('#/util/logger')
 jest.mock('#/app-flow')

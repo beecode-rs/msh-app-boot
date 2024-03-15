@@ -1,7 +1,7 @@
 import { LoggerStrategyVoid } from '@beecode/msh-logger/logger-strategy/void'
 import { describe, expect, it } from '@jest/globals'
 
-import { logger, setAppBootLogger } from '#/util/logger'
+import { logger, setAppBootLogger } from '#src/util/logger'
 
 describe('logger', () => {
 	describe('appBootLogger', () => {

@@ -1,6 +1,6 @@
 import { describe, expect, it, jest } from '@jest/globals'
 
-import { AppFlow } from '#/app-flow'
+import { AppFlow } from '#src/app-flow'
 
 class MockAppFlow extends AppFlow {
 	constructor(...flow: (FakeFlow | FakeFlow[])[]) {

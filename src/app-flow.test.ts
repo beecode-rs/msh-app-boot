@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, jest } from '@jest/globals'
 
-import { AppFlow, FlowDirectionMapper } from '#/app-flow'
-import { LifeCycleMockImplementation } from '#/life-cycle.test'
-import { logger } from '#/util/logger'
+import { AppFlow, FlowDirectionMapper } from '#src/app-flow'
+import { LifeCycleMockImplementation } from '#src/life-cycle.test'
+import { logger } from '#src/util/logger'
 
 jest.mock('#/util/logger')
 

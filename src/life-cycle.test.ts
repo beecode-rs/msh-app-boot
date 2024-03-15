@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, jest } from '@jest/globals'
 
-// import { LifeCycle } from '#/life-cycle'
-import { logger } from '#/util/logger'
+// import { LifeCycle } from '#src/life-cycle'
+import { logger } from '#src/util/logger'
 
 jest.mock('#/util/logger')
 

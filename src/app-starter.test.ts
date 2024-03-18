@@ -4,8 +4,8 @@ import { AppFlow } from '#src/app-flow'
 import { AppStarter, AppStarterStatusMapper } from '#src/app-starter'
 import { logger } from '#src/util/logger'
 
-jest.mock('#/util/logger')
-jest.mock('#/app-flow')
+jest.mock('#src/util/logger')
+jest.mock('#src/app-flow')
 
 class DummyAppFlow extends AppFlow {
 	// eslint-disable-next-line @typescript-eslint/no-useless-constructor

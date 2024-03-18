@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, jest } from '@jest/globals'
 // import { LifeCycle } from '#src/life-cycle'
 import { logger } from '#src/util/logger'
 
-jest.mock('#/util/logger')
+jest.mock('#src/util/logger')
 
 export class LifeCycleMockImplementation {
 	readonly name: string

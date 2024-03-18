@@ -4,7 +4,7 @@ import { AppFlow, FlowDirectionMapper } from '#src/app-flow'
 import { LifeCycleMockImplementation } from '#src/life-cycle.test'
 import { logger } from '#src/util/logger'
 
-jest.mock('#/util/logger')
+jest.mock('#src/util/logger')
 
 export type FlowListMockImplementation = (LifeCycleMockImplementation | LifeCycleMockImplementation[])[]
 

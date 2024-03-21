@@ -1,18 +1,14 @@
 import { afterEach, describe, expect, it, jest } from '@jest/globals'
 
-import { AppFlow, FlowDirectionMapper } from '#src/app-flow'
-import { LifeCycleMockImplementation } from '#src/life-cycle.test'
-import { logger } from '#src/util/logger'
+import { LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation'
 
-jest.mock('#src/util/logger')
+jest.unstable_mockModule('#src/util/logger', async () => {
+	return import('#src/util/__mocks__/logger')
+})
 
-export type FlowListMockImplementation = (LifeCycleMockImplementation | LifeCycleMockImplementation[])[]
-
-export class AppFlowMockImplementation extends AppFlow {
-	constructor(...args: FlowListMockImplementation) {
-		super(...(args as any))
-	}
-}
+const { logger: loggerMock } = await import('#src/util/logger')
+const { AppFlowMockImplementation } = await import('#src/__mocks__/app-flow-mock-implementation')
+const { AppFlow, FlowDirectionMapper } = await import('#src/app-flow')
 
 describe('AppFlow', () => {
 	afterEach(() => {
@@ -117,8 +113,8 @@ describe('AppFlow', () => {
 				await AppFlow.DeepExecFlowList({ direction: FlowDirectionMapper.DESTROY, flowList: flow })
 				throw new Error('failed')
 			} catch (err) {
-				expect(logger().error).toHaveBeenCalledTimes(1)
-				expect(logger().error).toHaveBeenCalledWith(lifeCycleError)
+				expect(loggerMock().error).toHaveBeenCalledTimes(1)
+				expect(loggerMock().error).toHaveBeenCalledWith(lifeCycleError)
 				expect(spy_execSyncFlowList).not.toHaveBeenCalled()
 				expect(fakeLifeCycle1.destroy).toHaveBeenCalledTimes(1)
 			}

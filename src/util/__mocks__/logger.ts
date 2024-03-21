@@ -13,6 +13,6 @@ const _cache = {
 
 export const setAppBootLogger = jest.fn<(logger: LoggerStrategy) => void>()
 
-export const logger = jest.fn((): LoggerStrategy => {
+export const logger = (): LoggerStrategy => {
 	return _cache.logger
-})
+}

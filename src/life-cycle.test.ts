@@ -4,34 +4,7 @@ jest.unstable_mockModule('#src/util/logger', async () => {
 	return import('#src/util/__mocks__/logger')
 })
 const { logger: loggerMock } = await import('#src/util/logger')
-
-export class LifeCycleMockImplementation {
-	readonly name: string
-
-	constructor(params: { name: string }) {
-		const { name } = params
-		this.name = name
-
-		this._createFn = jest.fn<() => Promise<string>>()
-		this._destroyFn = jest.fn<() => Promise<string>>()
-		this.create = jest.fn<() => Promise<string>>()
-		this.destroy = jest.fn<() => Promise<string>>()
-	}
-
-	protected _createFn: jest.Mock<() => Promise<string>>
-	protected _destroyFn: jest.Mock<() => Promise<string>>
-
-	create: jest.Mock
-	destroy: jest.Mock
-
-	get createFn(): jest.Mock<() => Promise<string>> {
-		return this._createFn
-	}
-
-	get destroyFn(): jest.Mock<() => Promise<string>> {
-		return this._destroyFn
-	}
-}
+const { LifeCycleMockImplementation } = await import('#src/__mocks__/life-cycle-mock-implementation')
 
 describe('LifeCycle', () => {
 	afterEach(() => {

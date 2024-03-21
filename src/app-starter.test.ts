@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals'
 
 import { AppFlow } from '#src/app-flow'
-import { AppStarter, AppStarterStatusMapper } from '#src/app-starter'
+import { AppStarter } from '#src/app-starter'
 
 jest.unstable_mockModule('#src/util/logger', async () => {
 	return import('#src/util/__mocks__/logger')
@@ -11,14 +11,8 @@ const { logger: loggerMock } = await import('#src/util/logger')
 jest.unstable_mockModule('#src/app-flow', async () => {
 	return import('#src/__mocks__/app-flow')
 })
-const { AppFlow: AppFlowMock } = await import('#src/app-flow')
-
-class AppFlowMockImplementation extends AppFlowMock {
-	// eslint-disable-next-line @typescript-eslint/no-useless-constructor
-	constructor() {
-		super()
-	}
-}
+const { AppFlowMockImplementation } = await import('#src/__mocks__/app-flow-mock-implementation')
+const { AppStarter: AppStarterImported, AppStarterStatusMapper } = await import('#src/app-starter')
 
 describe('AppStarter', () => {
 	let appFlowMock: AppFlow
@@ -26,7 +20,7 @@ describe('AppStarter', () => {
 
 	beforeEach(() => {
 		appFlowMock = new AppFlowMockImplementation()
-		appStarter = new AppStarter(appFlowMock)
+		appStarter = new AppStarterImported(appFlowMock)
 	})
 
 	afterEach(() => {

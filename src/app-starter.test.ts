@@ -2,12 +2,18 @@ import { afterEach, beforeEach, describe, expect, it, jest } from '@jest/globals
 
 import { AppFlow } from '#src/app-flow'
 import { AppStarter, AppStarterStatusMapper } from '#src/app-starter'
-import { logger } from '#src/util/logger'
 
-jest.mock('#src/util/logger')
-jest.mock('#src/app-flow')
+jest.unstable_mockModule('#src/util/logger', async () => {
+	return import('#src/util/__mocks__/logger')
+})
+const { logger: loggerMock } = await import('#src/util/logger')
 
-class DummyAppFlow extends AppFlow {
+jest.unstable_mockModule('#src/app-flow', async () => {
+	return import('#src/__mocks__/app-flow')
+})
+const { AppFlow: AppFlowMock } = await import('#src/app-flow')
+
+class AppFlowMockImplementation extends AppFlowMock {
 	// eslint-disable-next-line @typescript-eslint/no-useless-constructor
 	constructor() {
 		super()
@@ -15,12 +21,12 @@ class DummyAppFlow extends AppFlow {
 }
 
 describe('AppStarter', () => {
-	let dummyAppFlow: DummyAppFlow
+	let appFlowMock: AppFlow
 	let appStarter: AppStarter
 
 	beforeEach(() => {
-		dummyAppFlow = new DummyAppFlow()
-		appStarter = new AppStarter(dummyAppFlow)
+		appFlowMock = new AppFlowMockImplementation()
+		appStarter = new AppStarter(appFlowMock)
 	})
 
 	afterEach(() => {
@@ -29,7 +35,7 @@ describe('AppStarter', () => {
 	})
 	describe('constructor', () => {
 		it('should set appFlow and check for defaults', () => {
-			expect(appStarter['_flow']).toEqual(dummyAppFlow)
+			expect(appStarter['_flow']).toEqual(appFlowMock)
 			expect(appStarter['_status']).toEqual(AppStarterStatusMapper.STOPPED)
 		})
 	})
@@ -43,25 +49,25 @@ describe('AppStarter', () => {
 		it('should log end return if status is STARTED', async () => {
 			appStarter['_status'] = AppStarterStatusMapper.STARTED
 			await appStarter.start()
-			expect(logger().warn).toHaveBeenCalledTimes(1)
-			expect(logger().warn).toHaveBeenCalledWith('App already started')
+			expect(loggerMock().warn).toHaveBeenCalledTimes(1)
+			expect(loggerMock().warn).toHaveBeenCalledWith('App already started')
 		})
 
 		it('should set status to STARTED and call created and if no error call _registerOnExit', async () => {
-			;(dummyAppFlow.create as jest.Mock<any>).mockResolvedValue(undefined)
+			;(appFlowMock.create as jest.Mock<any>).mockResolvedValue(undefined)
 			expect(appStarter['_status']).toEqual(AppStarterStatusMapper.STOPPED)
 
 			await appStarter.start()
 
 			expect(appStarter['_status']).toEqual(AppStarterStatusMapper.STARTED)
-			expect(dummyAppFlow.create).toHaveBeenCalledTimes(1)
+			expect(appFlowMock.create).toHaveBeenCalledTimes(1)
 			expect(appStarter['_registerOnExit']).toHaveBeenCalledTimes(1)
 			expect(appStarter['_onError']).not.toHaveBeenCalled()
 		})
 
 		it('should call created and if on error call _onError', async () => {
 			const error = new Error('boom')
-			;(dummyAppFlow.create as jest.Mock<any>).mockRejectedValue(error)
+			;(appFlowMock.create as jest.Mock<any>).mockRejectedValue(error)
 			;(appStarter['_onError'] as jest.Mock<any>).mockResolvedValue(undefined)
 			await appStarter.start()
 
@@ -74,7 +80,7 @@ describe('AppStarter', () => {
 		it('should throw error if _onError fails', async () => {
 			const error = new Error('boom')
 			const onErrorError = new Error('boom2')
-			;(dummyAppFlow.create as jest.Mock<any>).mockRejectedValue(error)
+			;(appFlowMock.create as jest.Mock<any>).mockRejectedValue(error)
 			;(appStarter['_onError'] as jest.Mock<any>).mockRejectedValue(onErrorError)
 
 			try {
@@ -94,17 +100,17 @@ describe('AppStarter', () => {
 			expect(appStarter['_status']).toEqual(AppStarterStatusMapper.STOPPED)
 
 			appStarter.stop()
-			expect(logger().warn).toHaveBeenCalledTimes(1)
-			expect(logger().warn).toHaveBeenCalledWith('App already stopped')
+			expect(loggerMock().warn).toHaveBeenCalledTimes(1)
+			expect(loggerMock().warn).toHaveBeenCalledWith('App already stopped')
 		})
 
 		it('should set status to STOPPED and call created and if no error call _registerOnExit', async () => {
-			;(dummyAppFlow.destroy as jest.Mock<any>).mockResolvedValue(undefined)
+			;(appFlowMock.destroy as jest.Mock<any>).mockResolvedValue(undefined)
 			appStarter['_status'] = AppStarterStatusMapper.STARTED
 
 			await appStarter.stop()
 
-			expect(dummyAppFlow.destroy).toHaveBeenCalledTimes(1)
+			expect(appFlowMock.destroy).toHaveBeenCalledTimes(1)
 			expect(appStarter['_status']).toEqual(AppStarterStatusMapper.STOPPED)
 		})
 	})
@@ -121,8 +127,8 @@ describe('AppStarter', () => {
 			appStarter.stop = jest.fn<any>().mockResolvedValue(undefined)
 			const error = new Error('boom')
 			await appStarter['_onError'](error)
-			expect(logger().error).toHaveBeenCalledTimes(1)
-			expect(logger().error).toHaveBeenCalledWith('boom')
+			expect(loggerMock().error).toHaveBeenCalledTimes(1)
+			expect(loggerMock().error).toHaveBeenCalledWith('boom')
 			expect(appStarter.stop).toHaveBeenCalledTimes(1)
 			expect(spy_process_exit).toHaveBeenCalledTimes(1)
 			expect(spy_process_exit).toHaveBeenCalledWith(1)
@@ -134,8 +140,8 @@ describe('AppStarter', () => {
 				const error = new Error('boom')
 				await appStarter['_onError'](error)
 			} catch (e) {
-				expect(logger().error).toHaveBeenCalledTimes(1)
-				expect(logger().error).toHaveBeenCalledWith('boom')
+				expect(loggerMock().error).toHaveBeenCalledTimes(1)
+				expect(loggerMock().error).toHaveBeenCalledWith('boom')
 				expect(appStarter.stop).toHaveBeenCalledTimes(1)
 				expect(spy_process_exit).not.toHaveBeenCalled()
 				expect(e).toEqual(stopError)
@@ -205,8 +211,8 @@ describe('AppStarter', () => {
 			appStarter['_gracefulStop'] = jest.fn<any>().mockRejectedValue(error)
 			await (processOnSlots['SIGTERM'] ?? ((): void => {}))()
 			expect(appStarter['_gracefulStop']).toHaveBeenCalledTimes(1)
-			expect(logger().error).toHaveBeenCalledTimes(1)
-			expect(logger().error).toHaveBeenCalledWith(error)
+			expect(loggerMock().error).toHaveBeenCalledTimes(1)
+			expect(loggerMock().error).toHaveBeenCalledWith(error)
 		})
 		it('should log error if graceful fails for signal SIGINT', async () => {
 			const error = new Error('boom')
@@ -214,8 +220,8 @@ describe('AppStarter', () => {
 			appStarter['_gracefulStop'] = jest.fn<any>().mockRejectedValue(error)
 			await (processOnSlots['SIGINT'] ?? ((): void => {}))()
 			expect(appStarter['_gracefulStop']).toHaveBeenCalledTimes(1)
-			expect(logger().error).toHaveBeenCalledTimes(1)
-			expect(logger().error).toHaveBeenCalledWith(error)
+			expect(loggerMock().error).toHaveBeenCalledTimes(1)
+			expect(loggerMock().error).toHaveBeenCalledWith(error)
 		})
 	})
 })

@@ -8,9 +8,7 @@ const jestConfig: JestConfigWithTsJest = {
 	testEnvironment: 'node',
 	testMatch: ['<rootDir>/src/**/*.(spec|test).[jt]s?(x)'],
 	testPathIgnorePatterns: ['/node_modules/'],
-	transform: {
-		'^.+\\.js$': 'babel-jest',
-	},
+	transform: {},
 }
 
 export default jestConfig

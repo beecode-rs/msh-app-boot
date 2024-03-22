@@ -4,6 +4,7 @@
 	"description": "",
 	"license": "ISC",
 	"author": "",
+	"type": "module",
 	"main": "jest.config.ts",
 	"scripts": {
 		"start:ts:basic-example": "ts-node ./src/basic-example/index.ts",

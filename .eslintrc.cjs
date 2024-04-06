@@ -1,17 +1,17 @@
 const namingConvention = () => {
 	// prettier-ignore
 	return [
-    { selector: ['default'], format: null, modifiers: ['public'], leadingUnderscore: 'forbid' },
-    { selector: ['default'], format: ['camelCase'], modifiers: ['protected'], leadingUnderscore: 'require' },
-    { selector: ['default'], format: ['camelCase'], modifiers: ['private'], prefix: ['__'] },
+		{ selector: ['default'], 								 format: null,           modifiers: ['public'],    leadingUnderscore: 'forbid' },
+		{ selector: ['default'], 								 format: ['camelCase'],  modifiers: ['protected'], leadingUnderscore: 'require' },
+		{ selector: ['default'], 								 format: ['camelCase'],  modifiers: ['private'],   prefix: ['__'] },
 		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['public'],    leadingUnderscore: 'forbid' },
 		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['protected'], leadingUnderscore: 'require' },
 		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['private'],   prefix: ['__'] },
-    { selector: ['enum'], format: ['PascalCase'] },
-    { selector: ['enumMember'], format: ['UPPER_CASE'] },
+		{ selector: ['enum'], 									 format: ['PascalCase'] },
+		{ selector: ['enumMember'], 						 format: ['UPPER_CASE'] },
 		{ selector: ['classMethod', 'accessor'], format: ['PascalCase'], modifiers: ['public', 'static'] },
 		{ selector: ['classProperty'], 					 format: ['UPPER_CASE'], modifiers: ['public', 'static'] },
-  ]
+	]
 }
 
 module.exports = {
@@ -20,6 +20,7 @@ module.exports = {
 		es6: true,
 		'jest/globals': true,
 		node: true,
+		jest: true
 	},
 	settings: {
 		'import/resolver': {
@@ -41,24 +42,26 @@ module.exports = {
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaVersion: 'ESNext',
-		project: './tsconfig-eslint.json',
+		project: './resource/tsconfig/eslint.json',
 		sourceType: 'module',
 	},
 	plugins: ['@typescript-eslint', 'eslint-plugin-import', 'import', 'no-only-tests', 'no-loops', 'jest', 'sort-keys-fix'],
 	rules: {
+		// TODO TEMP DISABLE
+		'@typescript-eslint/no-explicit-any':'warn',
 		// ESLINT
-		'no-restricted-imports': [
-			'error',
-			{
-				patterns: [
-					{
-						group: ['**/index'],
-						message: 'Please use `.../something` instead of ``.../something/index`',
-					},
-				],
-			},
-		],
-
+		// 'no-restricted-imports': [
+		// 	'error',
+		// 	{
+		// 		patterns: [
+		// 			{
+		// 				group: ['**/index'],
+		// 				message: 'Please use `.../something` instead of ``.../something/index`',
+		// 			},
+		// 		],
+		// 	},
+		// ],
+		'@typescript-eslint/prefer-ts-expect-error': 'off',
 		'prefer-arrow-callback': 'error',
 		'no-confusing-arrow': 'error',
 		'no-constant-condition': 'error',

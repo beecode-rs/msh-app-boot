@@ -12,7 +12,9 @@
 		"forceConsistentCasingInFileNames": true,
 		"inlineSourceMap": true,
 		"inlineSources": true,
-		"lib": ["ESNext"],
+		"lib": [
+			"ESNext"
+		],
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
 		"noFallthroughCasesInSwitch": true,
@@ -32,7 +34,9 @@
 		"target": "ESNext",
 		"traceResolution": false
 	},
-	"include": ["./"],
+	"include": [
+		"./"
+	],
 	"ts-node": {
 		"esm": true,
 		"experimentalSpecifierResolution": "node"

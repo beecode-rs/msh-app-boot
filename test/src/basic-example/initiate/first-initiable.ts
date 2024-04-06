@@ -1,4 +1,4 @@
-import { LifeCycle } from '@beecode/msh-app-boot/lib/life-cycle'
+import { LifeCycle } from '@beecode/msh-app-boot/life-cycle'
 
 export class FirstInitiable extends LifeCycle {
 	constructor() {

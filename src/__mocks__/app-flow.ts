@@ -1,4 +1,6 @@
-import { FlowList } from 'src/app-flow'
+import { jest } from '@jest/globals'
+
+import { FlowList } from '#src/app-flow'
 
 export class AppFlow {
 	protected readonly _flowList: FlowList

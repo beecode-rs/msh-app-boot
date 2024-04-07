@@ -1,3 +1,13 @@
+# [1.0.0](https://github.com/beecode-rs/msh-app-boot/compare/v0.1.1...v1.0.0) (2024-04-07)
+
+
+* refactor!: es modules and commonjs build (#2) ([b110ce4](https://github.com/beecode-rs/msh-app-boot/commit/b110ce4d83013392f5223afd06cb41865c81f95e)), closes [#2](https://github.com/beecode-rs/msh-app-boot/issues/2)
+
+
+### BREAKING CHANGES
+
+* changed file structure
+
 ## [0.1.1](https://github.com/beecode-rs/msh-app-boot/compare/v0.1.0...v0.1.1) (2023-05-22)
 
 

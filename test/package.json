@@ -5,6 +5,13 @@
 	"license": "ISC",
 	"author": "",
 	"type": "module",
+	"imports": {
+		"#src": "./src/index.js",
+		"#src/*": [
+			"./src/*.js",
+			"./src/*/index.js"
+		]
+	},
 	"main": "jest.config.ts",
 	"scripts": {
 		"start:ts:basic-example": "ts-node ./src/basic-example/index.ts",
@@ -13,10 +20,8 @@
 		"tsc:check": "npm run tsc -- --noEmit"
 	},
 	"dependencies": {
-		"@beecode/msh-logger": "0.2.0-alpha",
+		"@beecode/msh-app-boot": "..",
+		"@beecode/msh-logger": "1.0.1",
 		"tsconfig-paths": "4.2.0"
-	},
-	"optionalDependencies": {
-		"@beecode/msh-app-boot": ".."
 	}
 }

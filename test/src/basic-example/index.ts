@@ -1,7 +1,7 @@
-import { AppStarter } from '@beecode/msh-app-boot/lib/app-starter'
-import { setAppBootLogger } from '@beecode/msh-app-boot/lib/util/logger'
+import { AppStarter } from '@beecode/msh-app-boot/app-starter'
+import { setAppBootLogger } from '@beecode/msh-app-boot/util/logger'
 import { LogLevel } from '@beecode/msh-logger'
-import { LoggerStrategyConsole } from '@beecode/msh-logger/lib/logger-strategy/console'
+import { LoggerStrategyConsole } from '@beecode/msh-logger/logger-strategy/console'
 import { App } from 'src/basic-example/app'
 
 setAppBootLogger(new LoggerStrategyConsole({ logLevel: LogLevel.DEBUG }))

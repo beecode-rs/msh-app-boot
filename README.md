@@ -66,9 +66,9 @@ export class App extends AppFlow {
 
 // index.ts
 import { LogLevelType } from '@beecode/msh-node-log'
-import { ConsoleLogger } from '@beecode/msh-node-log/lib/console-logger'
+import { ConsoleLogger } from '@beecode/msh-node-log/console-logger.js'
 
-import { NodeAppLogger } from '@beecode/msh-app-boot/lib/util/logger'
+import { NodeAppLogger } from '@beecode/msh-logger/dist/util/logger'
 
 import { AppStarter } from '@beecode/msh-app-boot'
 import { App } from './app'

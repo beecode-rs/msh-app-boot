@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.0...v1.0.1) (2024-04-10)
+
+
+### Bug Fixes
+
+* update packages.json ([a9e818f](https://github.com/beecode-rs/msh-app-boot/commit/a9e818f3f61191e04abb563519afcccf7296aced))
+
 # [1.0.0](https://github.com/beecode-rs/msh-app-boot/compare/v0.1.1...v1.0.0) (2024-04-07)
 
 

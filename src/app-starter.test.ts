@@ -90,10 +90,10 @@ describe('AppStarter', () => {
 	})
 
 	describe('stop', () => {
-		it('should log end return if status is STOPPED', () => {
+		it('should log end return if status is STOPPED', async () => {
 			expect(appStarter['_status']).toEqual(AppStarterStatusMapper.STOPPED)
 
-			appStarter.stop()
+			await appStarter.stop()
 			expect(loggerMock().warn).toHaveBeenCalledTimes(1)
 			expect(loggerMock().warn).toHaveBeenCalledWith('App already stopped')
 		})

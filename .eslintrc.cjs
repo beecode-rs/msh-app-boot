@@ -1,16 +1,16 @@
 const namingConvention = () => {
 	// prettier-ignore
 	return [
-		{ selector: ['default'], 								 format: null,           modifiers: ['public'],    leadingUnderscore: 'forbid' },
-		{ selector: ['default'], 								 format: ['camelCase'],  modifiers: ['protected'], leadingUnderscore: 'require' },
-		{ selector: ['default'], 								 format: ['camelCase'],  modifiers: ['private'],   prefix: ['__'] },
-		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['public'],    leadingUnderscore: 'forbid' },
-		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['protected'], leadingUnderscore: 'require' },
-		{ selector: ['accessor'], 							 format: ['camelCase'],  modifiers: ['private'],   prefix: ['__'] },
-		{ selector: ['enum'], 									 format: ['PascalCase'] },
-		{ selector: ['enumMember'], 						 format: ['UPPER_CASE'] },
+		{ selector: ['default'], format: null, modifiers: ['public'], leadingUnderscore: 'forbid' },
+		{ selector: ['default'], format: ['camelCase'], modifiers: ['protected'], leadingUnderscore: 'require' },
+		{ selector: ['default'], format: ['camelCase'], modifiers: ['private'], prefix: ['__'] },
+		{ selector: ['accessor'], format: ['camelCase'], modifiers: ['public'], leadingUnderscore: 'forbid' },
+		{ selector: ['accessor'], format: ['camelCase'], modifiers: ['protected'], leadingUnderscore: 'require' },
+		{ selector: ['accessor'], format: ['camelCase'], modifiers: ['private'], prefix: ['__'] },
+		{ selector: ['enum'], format: ['PascalCase'] },
+		{ selector: ['enumMember'], format: ['UPPER_CASE'] },
 		{ selector: ['classMethod', 'accessor'], format: ['PascalCase'], modifiers: ['public', 'static'] },
-		{ selector: ['classProperty'], 					 format: ['UPPER_CASE'], modifiers: ['public', 'static'] },
+		{ selector: ['classProperty'], format: ['UPPER_CASE'], modifiers: ['public', 'static'] },
 	]
 }
 
@@ -20,7 +20,7 @@ module.exports = {
 		es6: true,
 		'jest/globals': true,
 		node: true,
-		jest: true
+		jest: true,
 	},
 	settings: {
 		'import/resolver': {
@@ -47,8 +47,9 @@ module.exports = {
 	},
 	plugins: ['@typescript-eslint', 'eslint-plugin-import', 'import', 'no-only-tests', 'no-loops', 'jest', 'sort-keys-fix'],
 	rules: {
-		// TODO TEMP DISABLE
-		'@typescript-eslint/no-explicit-any':'warn',
+		'@typescript-eslint/no-floating-promises': ['error'],
+		// TODO TEMP DISABLED
+		'@typescript-eslint/no-explicit-any': 'warn',
 		// ESLINT
 		// 'no-restricted-imports': [
 		// 	'error',

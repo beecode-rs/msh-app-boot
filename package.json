@@ -138,7 +138,7 @@
 		"@babel/preset-typescript": "7.24.1",
 		"@beecode/msh-test-contractor": "0.3.9",
 		"@commitlint/cli": "19.2.2",
-		"@commitlint/config-conventional": "19.1.0",
+		"@commitlint/config-conventional": "19.2.2",
 		"@commitlint/prompt": "19.2.2",
 		"@jest/globals": "29.7.0",
 		"@semantic-release/changelog": "6.0.3",

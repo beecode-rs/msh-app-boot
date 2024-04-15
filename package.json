@@ -127,7 +127,7 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-logger": "1.0.2"
+		"@beecode/msh-logger": "1.0.3"
 	},
 	"devDependencies": {
 		"@babel/cli": "7.24.1",
@@ -149,8 +149,8 @@
 		"@semantic-release/release-notes-generator": "13.0.0",
 		"@types/glob": "8.1.0",
 		"@types/node": "20.12.7",
-		"@typescript-eslint/eslint-plugin": "7.6.0",
-		"@typescript-eslint/parser": "7.6.0",
+		"@typescript-eslint/eslint-plugin": "7.7.0",
+		"@typescript-eslint/parser": "7.7.0",
 		"commitizen": "4.3.0",
 		"concurrently": "8.2.2",
 		"eslint": "8.57.0",

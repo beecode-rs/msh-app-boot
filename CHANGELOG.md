@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.1...v1.0.2) (2024-04-15)
+
+
+### Bug Fixes
+
+* bump typescript from 5.4.4 to 5.4.5 ([#9](https://github.com/beecode-rs/msh-app-boot/issues/9)) ([c88867d](https://github.com/beecode-rs/msh-app-boot/commit/c88867d6ff3746fbf78e333213cee16dc678ba46))
+* update package.json ([10a1763](https://github.com/beecode-rs/msh-app-boot/commit/10a17632cdcfb57ff5095dfac4963ba21ac288f7))
+
 ## [1.0.1](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.0...v1.0.1) (2024-04-10)
 
 

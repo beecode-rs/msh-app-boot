@@ -110,7 +110,7 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-logger": "1.0.3"
+		"@beecode/msh-logger": "1.0.4"
 	},
 	"devDependencies": {
 		"@babel/cli": "7.24.5",

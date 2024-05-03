@@ -1,6 +1,6 @@
 // import { contractorTestRunner } from '@beecode/msh-test-contractor/contract/contractor-test-runner'
 
-import { describe, expect, it } from '@jest/globals'
+import { describe, expect, it } from 'vitest'
 
 // contractorTestRunner.dir('./src')
 // contractorTestRunner.file('./src/event-bus/event-bus.contract.ts')

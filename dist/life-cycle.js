@@ -1,4 +1,4 @@
-import { logger } from './util/logger.js';
+import { logger } from '#src/util/logger';
 export class LifeCycle {
     name;
     constructor(params) {

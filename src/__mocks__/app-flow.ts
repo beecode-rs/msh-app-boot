@@ -1,4 +1,4 @@
-import { jest } from '@jest/globals'
+import { vi } from 'vitest'
 
 import { FlowList } from '#src/app-flow'
 
@@ -13,6 +13,6 @@ export class AppFlow {
 		this._flowList = [...args]
 	}
 
-	create = jest.fn()
-	destroy = jest.fn()
+	create = vi.fn()
+	destroy = vi.fn()
 }

@@ -1,4 +1,4 @@
-import { logger } from './util/logger.js';
+import { logger } from '#src/util/logger';
 export var AppStarterStatusMapper;
 (function (AppStarterStatusMapper) {
     AppStarterStatusMapper["STARTED"] = "started";

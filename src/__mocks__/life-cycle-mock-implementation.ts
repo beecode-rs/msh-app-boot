@@ -1,4 +1,4 @@
-import { jest } from '@jest/globals'
+import { Mock, vi } from 'vitest'
 
 import { LifeCycle } from '#src/life-cycle'
 
@@ -8,14 +8,14 @@ export class LifeCycleMockImplementation<T = any> extends LifeCycle<T> {
 		super(params)
 	}
 
-	protected _createFn = jest.fn<() => Promise<T>>()
-	protected _destroyFn = jest.fn<() => Promise<T>>()
+	protected _createFn = vi.fn()
+	protected _destroyFn = vi.fn()
 
-	get createFn(): jest.Mock<() => Promise<T>> {
+	get createFn(): Mock {
 		return this._createFn
 	}
 
-	get destroyFn(): jest.Mock<() => Promise<T>> {
+	get destroyFn(): Mock {
 		return this._destroyFn
 	}
 }

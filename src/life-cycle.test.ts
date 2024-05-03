@@ -1,16 +1,10 @@
-import { afterEach, describe, expect, it, jest } from '@jest/globals'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 
-jest.unstable_mockModule('#src/util/logger', async () => {
-	return import('#src/util/__mocks__/logger')
-})
-const { logger: loggerMock } = await import('#src/util/logger')
-const { LifeCycleMockImplementation } = await import('#src/__mocks__/life-cycle-mock-implementation')
+vi.mock('#src/util/logger')
+import { LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation'
+import { logger } from '#src/util/logger'
 
 describe('LifeCycle', () => {
-	afterEach(() => {
-		jest.resetAllMocks()
-	})
-
 	describe('name', () => {
 		it('should set name property', () => {
 			const someName = 'someName'
@@ -28,9 +22,9 @@ describe('LifeCycle', () => {
 			const result = await lifeCycle.create()
 
 			expect(result).toEqual('create returns this')
-			expect(loggerMock().debug).toHaveBeenCalledTimes(2)
-			expect(loggerMock().debug).toHaveBeenNthCalledWith(1, 'test-create Create START')
-			expect(loggerMock().debug).toHaveBeenNthCalledWith(2, 'test-create Create END')
+			expect(logger().debug).toHaveBeenCalledTimes(2)
+			expect(logger().debug).toHaveBeenNthCalledWith(1, 'test-create Create START')
+			expect(logger().debug).toHaveBeenNthCalledWith(2, 'test-create Create END')
 			expect(lifeCycle.createFn).toHaveBeenCalledTimes(1)
 		})
 	})
@@ -43,9 +37,9 @@ describe('LifeCycle', () => {
 			const result = await lifeCycle.destroy()
 
 			expect(result).toEqual('destroy returns this')
-			expect(loggerMock().debug).toHaveBeenCalledTimes(2)
-			expect(loggerMock().debug).toHaveBeenNthCalledWith(1, 'test-destroy Destroy START')
-			expect(loggerMock().debug).toHaveBeenNthCalledWith(2, 'test-destroy Destroy END')
+			expect(logger().debug).toHaveBeenCalledTimes(2)
+			expect(logger().debug).toHaveBeenNthCalledWith(1, 'test-destroy Destroy START')
+			expect(logger().debug).toHaveBeenNthCalledWith(2, 'test-destroy Destroy END')
 			expect(lifeCycle.destroyFn).toHaveBeenCalledTimes(1)
 		})
 	})

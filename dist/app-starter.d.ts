@@ -1,4 +1,4 @@
-import { AppFlow } from './app-flow.js';
+import { AppFlow } from '#src/app-flow';
 export declare enum AppStarterStatusMapper {
     STARTED = "started",
     STOPPED = "stopped"

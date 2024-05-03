@@ -1,4 +1,4 @@
-export { LifeCycle } from './life-cycle.js';
-export { AppFlow, FlowList, FlowDirectionMapper } from './app-flow.js';
-export { AppStarter, AppStarterStatusMapper } from './app-starter.js';
+export { LifeCycle } from '#src/life-cycle';
+export { AppFlow, FlowList, FlowDirectionMapper } from '#src/app-flow';
+export { AppStarter, AppStarterStatusMapper } from '#src/app-starter';
 //# sourceMappingURL=index.d.ts.map

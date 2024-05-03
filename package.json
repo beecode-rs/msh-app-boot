@@ -1,6 +1,6 @@
 {
 	"name": "@beecode/msh-app-boot",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "This project is intended to be used in typescript project to help with app initialization.",
 	"keywords": [],
 	"homepage": "https://github.com/beecode-rs/msh-app-boot#readme",

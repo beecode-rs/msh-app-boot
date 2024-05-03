@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.2...v1.0.3) (2024-05-03)
+
+
+### Bug Fixes
+
+* update package.json, esmodule remove alias, use vitest instead of jest ([#16](https://github.com/beecode-rs/msh-app-boot/issues/16)) ([fa58688](https://github.com/beecode-rs/msh-app-boot/commit/fa586883f1c8859ed3edae0ab8d0e0d2fece5287))
+
 ## [1.0.2](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.1...v1.0.2) (2024-04-15)
 
 

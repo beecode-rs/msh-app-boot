@@ -178,7 +178,7 @@
 		"tsc-alias": "1.8.8",
 		"tsc-watch": "6.2.0",
 		"typedoc": "0.25.13",
-		"typedoc-plugin-markdown": "3.17.1",
+		"typedoc-plugin-markdown": "4.0.0",
 		"typescript": "5.4.5"
 	},
 	"engines": {

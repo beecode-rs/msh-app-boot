@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.3...v1.0.4) (2024-05-04)
+
+
+### Bug Fixes
+
+* update package.json, use shared config for eslint and prettier ([a135469](https://github.com/beecode-rs/msh-app-boot/commit/a13546949188b2e41c1db3a9612808a1fa751a49))
+
 ## [1.0.3](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.2...v1.0.3) (2024-05-03)
 
 

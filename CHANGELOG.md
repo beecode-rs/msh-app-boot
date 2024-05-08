@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.4...v1.1.0) (2024-05-08)
+
+
+### Features
+
+* add shared semantic release config ([7238f5e](https://github.com/beecode-rs/msh-app-boot/commit/7238f5e64f4e4ab5b73b2a3062d43799a8a9bf93))
+
 ## [1.0.4](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.3...v1.0.4) (2024-05-04)
 
 

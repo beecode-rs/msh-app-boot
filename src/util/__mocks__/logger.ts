@@ -1,4 +1,4 @@
-import { LoggerStrategy, LoggerStrategyParams } from '@beecode/msh-logger'
+import { type LoggerStrategy, LoggerStrategyParams } from '@beecode/msh-logger'
 import { vi } from 'vitest'
 
 const _cache = {

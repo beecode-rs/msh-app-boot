@@ -1,8 +1,8 @@
-import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { type Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import { AppFlowMockImplementation } from '#src/__mocks__/app-flow-mock-implementation'
 import { AppStarterSpy } from '#src/__mocks__/app-starter-spy'
-import { AppFlow } from '#src/app-flow'
+import { type AppFlow } from '#src/app-flow'
 import { AppStarterStatusMapper } from '#src/app-starter'
 import { logger } from '#src/util/logger'
 
@@ -68,7 +68,9 @@ describe('AppStarter', () => {
 		it('should throw error if _onError fails', async () => {
 			const error = new Error('boom')
 			const onErrorError = new Error('boom2')
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			;(appFlowMock.create as any as Mock).mockRejectedValue(error)
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			;(appStarter.onErrorSpy as any as Mock).mockRejectedValue(onErrorError)
 
 			try {
@@ -93,6 +95,7 @@ describe('AppStarter', () => {
 		})
 
 		it('should set status to STOPPED and call created and if no error call _registerOnExit', async () => {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			;(appFlowMock.destroy as any as Mock).mockResolvedValue(undefined)
 			appStarter.setStatus = AppStarterStatusMapper.STARTED
 
@@ -108,7 +111,7 @@ describe('AppStarter', () => {
 		beforeEach(() => {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-expect-error
-			spy_process_exit = vi.spyOn(process, 'exit').mockImplementation(() => {}) // eslint-disable-line
+			spy_process_exit = vi.spyOn(process, 'exit').mockImplementation(() => {})
 		})
 
 		it('should log error message, call stop and end process', async () => {
@@ -142,7 +145,7 @@ describe('AppStarter', () => {
 		beforeEach(() => {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-expect-error
-			spy_process_exit = vi.spyOn(process, 'exit').mockImplementation(() => {}) // eslint-disable-line
+			spy_process_exit = vi.spyOn(process, 'exit').mockImplementation(() => {})
 		})
 		it('should call stop and exit', async () => {
 			appStarter.stop = vi.fn().mockResolvedValue(undefined)
@@ -184,12 +187,14 @@ describe('AppStarter', () => {
 		it('should call graceful stop for signal SIGTERM', async () => {
 			appStarter.registerOnExitSpy()
 			appStarter.gracefulStopSpy = vi.fn().mockResolvedValue(undefined)
+			// eslint-disable-next-line @typescript-eslint/await-thenable
 			await (processOnSlots['SIGTERM'] ?? ((): void => {}))()
 			expect(appStarter.gracefulStopSpy).toHaveBeenCalledTimes(1)
 		})
 		it('should call graceful stop for signal SIGINT', async () => {
 			appStarter.registerOnExitSpy()
 			appStarter.gracefulStopSpy = vi.fn().mockResolvedValue(undefined)
+			// eslint-disable-next-line @typescript-eslint/await-thenable
 			await (processOnSlots['SIGINT'] ?? ((): void => {}))()
 			expect(appStarter.gracefulStopSpy).toHaveBeenCalledTimes(1)
 		})

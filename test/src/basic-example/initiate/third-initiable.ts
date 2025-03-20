@@ -5,10 +5,12 @@ export class ThirdInitiable extends LifeCycle {
 		super({ name: 'Third initiable' })
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/require-await
 	protected async _createFn(): Promise<any> {
 		console.log('%%%%%% Third create') // eslint-disable-line no-console
 	}
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/require-await
 	protected async _destroyFn(): Promise<any> {
 		console.log('%%%%%% Third destroy') // eslint-disable-line no-console
 	}

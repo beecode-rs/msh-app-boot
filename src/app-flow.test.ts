@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 
 import { AppFlowMockImplementation } from '#src/__mocks__/app-flow-mock-implementation'
-import { LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation'
+import { type LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation'
 import { AppFlow, FlowDirectionMapper } from '#src/app-flow'
 import { logger } from '#src/util/logger'
 
@@ -14,6 +14,7 @@ describe('AppFlow', () => {
 
 	describe('create', () => {
 		it('should call _deepExecFlowList', async () => {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-redundant-type-constituents
 			const flow: any[] | LifeCycleMockImplementation = []
 			const appFlow = new AppFlowMockImplementation(...flow)
 			const spy_deepExecFlowList = vi.spyOn(AppFlow, 'DeepExecFlowList').mockImplementation(() => Promise.resolve())
@@ -26,10 +27,13 @@ describe('AppFlow', () => {
 
 	describe('destroy', () => {
 		it('should call _deepExecFlowList and _topLevelReversedFlowList', async () => {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-redundant-type-constituents
 			const flow: any[] | LifeCycleMockImplementation = []
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-redundant-type-constituents
 			const reversFlow: any[] | LifeCycleMockImplementation = []
 			const appFlow = new AppFlowMockImplementation(...flow)
 			const spy_deepExecFlowList = vi.spyOn(AppFlow, 'DeepExecFlowList').mockImplementation(() => Promise.resolve())
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const spy_topLevelReversedFlowList = vi.spyOn(appFlow as any, '_topLevelReversedFlowList').mockReturnValue(reversFlow)
 
 			await appFlow.destroy()
@@ -41,11 +45,12 @@ describe('AppFlow', () => {
 
 	describe('_topLevelReversedFlowList', () => {
 		it('should call reverse on flowList', () => {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const fake_flow = { reverse: vi.fn().mockImplementation(() => undefined) } as any
 
 			const appFlow = new AppFlowMockImplementation()
-			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-			// @ts-expect-error
+
+			// @ts-expect-error test
 			appFlow['_flowList'] = fake_flow
 
 			appFlow['_topLevelReversedFlowList']()
@@ -58,6 +63,7 @@ describe('AppFlow', () => {
 			const fakeLifeCycle1 = { destroy: vi.fn() }
 			const fakeLifeCycle2 = { destroy: vi.fn() }
 			const fakeLifeCycle3 = { destroy: vi.fn() }
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const lifeCycleArray = [fakeLifeCycle1, fakeLifeCycle2, fakeLifeCycle3] as any[]
 			await AppFlow.ExecSyncFlowList(lifeCycleArray, FlowDirectionMapper.DESTROY)
 			expect(fakeLifeCycle1.destroy).toHaveBeenCalledTimes(1)
@@ -68,6 +74,7 @@ describe('AppFlow', () => {
 
 	describe('DeepExecFlowList', () => {
 		it('should not call ExecSyncFlowList if flow empty', async () => {
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const flow = [] as any[]
 			const spy_execSyncFlowList = vi.spyOn(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
 
@@ -78,6 +85,7 @@ describe('AppFlow', () => {
 
 		it('should not call ExecSyncFlowList if flow has no arrays', async () => {
 			const fakeLifeCycle1 = { destroy: vi.fn() }
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const flow = [fakeLifeCycle1] as any[]
 			const spy_execSyncFlowList = vi.spyOn(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
 
@@ -91,6 +99,7 @@ describe('AppFlow', () => {
 			const fakeLifeCycle1 = { destroy: vi.fn() }
 			const fakeLifeCycle2 = { destroy: vi.fn() }
 
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const flow = [[fakeLifeCycle1, fakeLifeCycle2]] as any[]
 
 			const spy_execSyncFlowList = vi.spyOn(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
@@ -101,7 +110,9 @@ describe('AppFlow', () => {
 
 		it('should log end throw error if lifeCycle fails', async () => {
 			const lifeCycleError = new Error('boom')
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const fakeLifeCycle1 = { destroy: vi.fn<any>().mockRejectedValue(lifeCycleError) }
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const flow = [fakeLifeCycle1] as any[]
 			const spy_execSyncFlowList = vi.spyOn(AppFlow, 'ExecSyncFlowList').mockImplementation(() => Promise.resolve())
 

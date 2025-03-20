@@ -1,6 +1,6 @@
 import { vi } from 'vitest'
 
-import { AppFlow, AppStarter, AppStarterStatusMapper } from '#src'
+import { type AppFlow, AppStarter, type AppStarterStatusMapper } from '#src'
 
 export class AppStarterSpy extends AppStarter {
 	get getFlow(): AppFlow {
@@ -21,11 +21,13 @@ export class AppStarterSpy extends AppStarter {
 	}
 
 	gracefulStopSpy = vi.fn().mockImplementation(super._gracefulStop)
+	// eslint-disable-next-line @typescript-eslint/require-await
 	protected async _gracefulStop(): Promise<void> {
 		return this.gracefulStopSpy()
 	}
 
 	onErrorSpy = vi.fn<[Error]>().mockImplementation(super._onError)
+	// eslint-disable-next-line @typescript-eslint/require-await
 	protected async _onError(err: Error): Promise<void> {
 		return this.onErrorSpy(err)
 	}

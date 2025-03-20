@@ -1,9 +1,10 @@
-import { Mock, describe, expect, it, vi } from 'vitest'
+import { type Mock, describe, expect, it, vi } from 'vitest'
 
 import { AppFlow } from '#src/app-flow'
 
 class MockAppFlow extends AppFlow {
 	constructor(...flow: (FakeFlow | FakeFlow[])[]) {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		super(...(flow as any[]))
 	}
 }

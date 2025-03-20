@@ -1,4 +1,4 @@
-import { AppFlow } from '#src/app-flow'
+import { type AppFlow } from '#src/app-flow'
 import { logger } from '#src/util/logger'
 
 export enum AppStarterStatusMapper {

@@ -1,4 +1,4 @@
-import { LifeCycle } from './life-cycle.js';
+import { type LifeCycle } from './life-cycle.js';
 export type FlowList = (LifeCycle | LifeCycle[])[];
 export declare enum FlowDirectionMapper {
     DESTROY = "destroy",

@@ -1,5 +1,6 @@
 import { logger } from '#src/util/logger'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export abstract class LifeCycle<T = any> {
 	protected abstract _createFn(): Promise<T>
 	protected abstract _destroyFn(): Promise<T>

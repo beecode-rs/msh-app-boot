@@ -1,6 +1,6 @@
 import { vi } from 'vitest'
 
-import { FlowList } from '#src/app-flow'
+import { type FlowList } from '#src/app-flow'
 
 export class AppFlow {
 	protected readonly _flowList: FlowList

@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.0...v1.1.1) (2025-03-20)
+
+
+### Bug Fixes
+
+* update Node.js version and configurations, add Prettier config ([7b35975](https://github.com/beecode-rs/msh-app-boot/commit/7b359754c86adf194148b6807ef96ba1853bb9ad))
+
 # [1.1.0](https://github.com/beecode-rs/msh-app-boot/compare/v1.0.4...v1.1.0) (2024-05-08)
 
 

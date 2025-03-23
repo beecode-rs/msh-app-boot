@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.1...v1.1.2) (2025-03-23)
+
+
+### Bug Fixes
+
+* refactor ESLint configuration and update dependencies ([cd4942f](https://github.com/beecode-rs/msh-app-boot/commit/cd4942f5512b175d57366578b726c1b924bec58e))
+* refactor ESLint configuration and update dependencies ([17117ad](https://github.com/beecode-rs/msh-app-boot/commit/17117ad833852bafb4a3c04f43fe8119ecb1fa9d))
+
 ## [1.1.1](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.0...v1.1.1) (2025-03-20)
 
 

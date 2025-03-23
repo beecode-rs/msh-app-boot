@@ -4,6 +4,7 @@ import { LifeCycle } from '#src/life-cycle'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export class LifeCycleMockImplementation<T = any> extends LifeCycle<T> {
+	// eslint-disable-next-line @typescript-eslint/no-useless-constructor
 	constructor(params: { name: string }) {
 		super(params)
 	}

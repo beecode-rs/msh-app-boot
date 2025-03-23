@@ -32,7 +32,14 @@ export class AppStarter {
 	protected _registerOnExit(): void {
 		;['SIGTERM', 'SIGINT'].forEach((signal: string) => {
 			process.on(signal, () => {
-				this._gracefulStop().catch((err) => logger().error(err))
+				this._gracefulStop().catch((err: unknown) => {
+					if (err instanceof Error) {
+						logger().error(err.message)
+
+						return
+					}
+					logger().error(err)
+				})
 			})
 		})
 	}

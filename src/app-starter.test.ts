@@ -111,6 +111,7 @@ describe('AppStarter', () => {
 		beforeEach(() => {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-expect-error
+			// eslint-disable-next-line @typescript-eslint/no-empty-function
 			spy_process_exit = vi.spyOn(process, 'exit').mockImplementation(() => {})
 		})
 
@@ -145,6 +146,7 @@ describe('AppStarter', () => {
 		beforeEach(() => {
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-expect-error
+			// eslint-disable-next-line @typescript-eslint/no-empty-function
 			spy_process_exit = vi.spyOn(process, 'exit').mockImplementation(() => {})
 		})
 		it('should call stop and exit', async () => {
@@ -187,14 +189,14 @@ describe('AppStarter', () => {
 		it('should call graceful stop for signal SIGTERM', async () => {
 			appStarter.registerOnExitSpy()
 			appStarter.gracefulStopSpy = vi.fn().mockResolvedValue(undefined)
-			// eslint-disable-next-line @typescript-eslint/await-thenable
+			// eslint-disable-next-line @typescript-eslint/await-thenable, @typescript-eslint/no-empty-function, @typescript-eslint/no-confusing-void-expression
 			await (processOnSlots['SIGTERM'] ?? ((): void => {}))()
 			expect(appStarter.gracefulStopSpy).toHaveBeenCalledTimes(1)
 		})
 		it('should call graceful stop for signal SIGINT', async () => {
 			appStarter.registerOnExitSpy()
 			appStarter.gracefulStopSpy = vi.fn().mockResolvedValue(undefined)
-			// eslint-disable-next-line @typescript-eslint/await-thenable
+			// eslint-disable-next-line @typescript-eslint/await-thenable, @typescript-eslint/no-empty-function, @typescript-eslint/no-confusing-void-expression
 			await (processOnSlots['SIGINT'] ?? ((): void => {}))()
 			expect(appStarter.gracefulStopSpy).toHaveBeenCalledTimes(1)
 		})

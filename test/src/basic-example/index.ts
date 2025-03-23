@@ -6,4 +6,11 @@ import { App } from 'src/basic-example/app'
 
 setAppBootLogger(new LoggerStrategyConsole({ logLevel: LogLevel.DEBUG }))
 
-new AppStarter(new App()).start().catch((err) => console.log(err)) // eslint-disable-line no-console
+new AppStarter(new App()).start().catch((err: unknown) => {
+	if (err instanceof Error) {
+		console.log(err.message) // eslint-disable-line no-console
+
+		return
+	}
+	console.log(err) // eslint-disable-line no-console
+})

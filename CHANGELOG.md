@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.2...v1.1.3) (2025-03-27)
+
+
+### Bug Fixes
+
+* update package dependencies to latest versions ([5b45055](https://github.com/beecode-rs/msh-app-boot/commit/5b450556c168330e43bcb885c70830d9427c35c1))
+
 ## [1.1.2](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.1...v1.1.2) (2025-03-23)
 
 

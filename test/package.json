@@ -21,7 +21,7 @@
 	},
 	"dependencies": {
 		"@beecode/msh-app-boot": "..",
-		"@beecode/msh-logger": "1.0.1",
-		"tsconfig-paths": "4.2.0"
+		"@beecode/msh-logger": "^1.0.1",
+		"tsconfig-paths": "^4.2.0"
 	}
 }

@@ -16,8 +16,8 @@
 	"type": "module",
 	"imports": {
 		"#packageJson": "./package.json",
-		"#src": "./dist/index.js",
-		"#src/*": "./dist/*.js"
+		"#src": "./src/index.ts",
+		"#src/*": "./src/*.ts"
 	},
 	"exports": {
 		".": {
@@ -43,7 +43,7 @@
 	],
 	"scripts": {
 		"babel": "npx babel --extensions .ts",
-		"build": "npm run clean && npm run tsc",
+		"build": "npm run clean && npm run tsc && npm run fix-hybrid-lib-esm",
 		"build-cjs": "npm run clean-cjs && npm run tsc-cjs && npm run tsc-types && npm run tsc-types-alias && npm run fix-hybrid-lib-cjs",
 		"clean": "rimraf ./dist",
 		"clean-cjs": "rimraf ./lib",
@@ -55,6 +55,7 @@
 		"docker-run-package-lock-update": "docker run --rm -v ./:/usr/app/ milosbugarinovic/msh-lib-base:node22.14.0-alpine3.21 npm i --package-lock-only",
 		"docker-run-sh": "docker run --rm -it bc-msh-app-boot sh",
 		"fix-hybrid-lib-cjs": "mkdir -p ./lib && echo '{\"type\": \"commonjs\"}' > ./lib/package.json",
+		"fix-hybrid-lib-esm": "mkdir -p ./dist && echo '{\"type\": \"module\", \"imports\": {\"#packageJson\": \"../package.json\", \"#src\": \"./index.js\", \"#src/*\": \"./*.js\"}}' > ./dist/package.json",
 		"init": "concurrently -c auto 'npm:init:*'",
 		"init:git-config": "git config include.path ./.git-config",
 		"init:husky": "npx husky install",

@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.3...v1.1.4) (2025-03-29)
+
+
+### Bug Fixes
+
+* update package.json to use TypeScript source files and add ESM build script ([f87e592](https://github.com/beecode-rs/msh-app-boot/commit/f87e5929da84420a2c23474e9bf9d7218b33e1cf))
+
 ## [1.1.3](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.2...v1.1.3) (2025-03-27)
 
 

@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.4...v1.1.5) (2026-02-16)
+
+
+### Bug Fixes
+
+* remove build artifacts from version control ([fbdb87f](https://github.com/beecode-rs/msh-app-boot/commit/fbdb87f807b07b6481ee0250ef9f790651af1406))
+
 ## [1.1.4](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.3...v1.1.4) (2025-03-29)
 
 

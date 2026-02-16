@@ -115,11 +115,11 @@ describe('AppStarter', () => {
 			spy_process_exit = vi.spyOn(process, 'exit').mockImplementation(() => {})
 		})
 
-		it('should log error message, call stop and end process', () => {
+		it('should log error message, call stop and end process', async () => {
 			appStarter.stop = vi.fn().mockResolvedValue(undefined)
 			const error = new Error('boom')
-			//
-			appStarter.onErrorSpy(error)
+			// eslint-disable-next-line @typescript-eslint/await-thenable
+			await appStarter.onErrorSpy(error)
 			expect(logger().error).toHaveBeenCalledTimes(1)
 			expect(logger().error).toHaveBeenCalledWith('boom')
 			expect(appStarter.stop).toHaveBeenCalledTimes(1)

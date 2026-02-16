@@ -1,6 +1,6 @@
 import { type Mock, vi } from 'vitest'
 
-import { LifeCycle } from '#src/life-cycle'
+import { LifeCycle } from '#src/life-cycle.js'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export class LifeCycleMockImplementation<T = any> extends LifeCycle<T> {

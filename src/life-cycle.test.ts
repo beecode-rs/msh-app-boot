@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 
-vi.mock('#src/util/logger')
-import { LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation'
-import { logger } from '#src/util/logger'
+vi.mock('#src/util/logger.js')
+import { LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation.js'
+import { logger } from '#src/util/logger.js'
 
 describe('LifeCycle', () => {
 	describe('name', () => {

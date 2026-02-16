@@ -1,6 +1,6 @@
 import { vi } from 'vitest'
 
-import { type AppFlow, AppStarter, type AppStarterStatusMapper } from '#src'
+import { type AppFlow, AppStarter, type AppStarterStatusMapper } from '#src/index.js'
 
 export class AppStarterSpy extends AppStarter {
 	get getFlow(): AppFlow {

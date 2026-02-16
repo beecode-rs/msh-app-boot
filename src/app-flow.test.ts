@@ -1,11 +1,11 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 
-import { AppFlowMockImplementation } from '#src/__mocks__/app-flow-mock-implementation'
-import { type LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation'
-import { AppFlow, FlowDirectionMapper } from '#src/app-flow'
-import { logger } from '#src/util/logger'
+import { AppFlowMockImplementation } from '#src/__mocks__/app-flow-mock-implementation.js'
+import { type LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation.js'
+import { AppFlow, FlowDirectionMapper } from '#src/app-flow.js'
+import { logger } from '#src/util/logger.js'
 
-vi.mock('#src/util/logger')
+vi.mock('#src/util/logger.js')
 
 describe('AppFlow', () => {
 	afterEach(() => {

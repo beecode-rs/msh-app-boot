@@ -1,5 +1,5 @@
-import { type LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation'
-import { AppFlow } from '#src/app-flow'
+import { type LifeCycleMockImplementation } from '#src/__mocks__/life-cycle-mock-implementation.js'
+import { AppFlow } from '#src/app-flow.js'
 
 // eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
 export type FlowListMockImplementation = (LifeCycleMockImplementation | LifeCycleMockImplementation[])[]

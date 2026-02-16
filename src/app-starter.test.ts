@@ -1,13 +1,13 @@
 import { type Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-import { AppFlowMockImplementation } from '#src/__mocks__/app-flow-mock-implementation'
-import { AppStarterSpy } from '#src/__mocks__/app-starter-spy'
-import { type AppFlow } from '#src/app-flow'
-import { AppStarterStatusMapper } from '#src/app-starter'
-import { logger } from '#src/util/logger'
+import { AppFlowMockImplementation } from '#src/__mocks__/app-flow-mock-implementation.js'
+import { AppStarterSpy } from '#src/__mocks__/app-starter-spy.js'
+import { type AppFlow } from '#src/app-flow.js'
+import { AppStarterStatusMapper } from '#src/app-starter.js'
+import { logger } from '#src/util/logger.js'
 
-vi.mock('#src/util/logger')
-vi.mock('#src/app-flow')
+vi.mock('#src/util/logger.js')
+vi.mock('#src/app-flow.js')
 
 describe('AppStarter', () => {
 	let appFlowMock: AppFlow

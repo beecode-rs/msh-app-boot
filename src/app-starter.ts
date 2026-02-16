@@ -1,5 +1,5 @@
-import { type AppFlow } from '#src/app-flow'
-import { logger } from '#src/util/logger'
+import { type AppFlow } from '#src/app-flow.js'
+import { logger } from '#src/util/logger.js'
 
 export enum AppStarterStatusMapper {
 	STARTED = 'started',

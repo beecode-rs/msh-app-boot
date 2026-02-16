@@ -115,22 +115,23 @@ describe('AppStarter', () => {
 			spy_process_exit = vi.spyOn(process, 'exit').mockImplementation(() => {})
 		})
 
-		it('should log error message, call stop and end process', async () => {
+		it('should log error message, call stop and end process', () => {
 			appStarter.stop = vi.fn().mockResolvedValue(undefined)
 			const error = new Error('boom')
-			await appStarter.onErrorSpy(error)
+			//
+			appStarter.onErrorSpy(error)
 			expect(logger().error).toHaveBeenCalledTimes(1)
 			expect(logger().error).toHaveBeenCalledWith('boom')
 			expect(appStarter.stop).toHaveBeenCalledTimes(1)
 			expect(spy_process_exit).toHaveBeenCalledTimes(1)
 			expect(spy_process_exit).toHaveBeenCalledWith(1)
 		})
-		it('should log error message, call stop and fail', async () => {
+		it('should log error message, call stop and fail', () => {
 			const stopError = new Error('stopBoom')
 			appStarter.stop = vi.fn().mockRejectedValue(stopError)
 			try {
 				const error = new Error('boom')
-				await appStarter.onErrorSpy(error)
+				appStarter.onErrorSpy(error)
 			} catch (e) {
 				expect(logger().error).toHaveBeenCalledTimes(1)
 				expect(logger().error).toHaveBeenCalledWith('boom')

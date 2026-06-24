@@ -1,8 +1,8 @@
 import { type LoggerStrategy } from '@beecode/msh-logger'
-import { LoggerStrategyVoid } from '@beecode/msh-logger/logger-strategy/void'
+import { PresetVoid } from '@beecode/msh-logger/controller/preset/void'
 
 const _cache = {
-	logger: new LoggerStrategyVoid(),
+	logger: new PresetVoid(),
 }
 
 export const setAppBootLogger = (logger: LoggerStrategy): void => {

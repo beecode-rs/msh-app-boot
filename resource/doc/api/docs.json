@@ -1,4 +1,5 @@
 {
+	"schemaVersion": "2.0",
 	"id": 0,
 	"name": "@beecode/msh-app-boot",
 	"variant": "project",
@@ -6,31 +7,31 @@
 	"flags": {},
 	"children": [
 		{
-			"id": 1,
-			"name": "app-flow",
+			"id": 29,
+			"name": "business/service/app-flow",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 3,
+					"id": 31,
 					"name": "FlowDirectionMapper",
 					"variant": "declaration",
 					"kind": 8,
 					"flags": {},
 					"children": [
 						{
-							"id": 5,
+							"id": 33,
 							"name": "CREATE",
 							"variant": "declaration",
 							"kind": 16,
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
+									"fileName": "business/service/app-flow.ts",
 									"line": 8,
 									"character": 1,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L8"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L8"
 								}
 							],
 							"type": {
@@ -39,17 +40,17 @@
 							}
 						},
 						{
-							"id": 4,
+							"id": 32,
 							"name": "DESTROY",
 							"variant": "declaration",
 							"kind": 16,
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
+									"fileName": "business/service/app-flow.ts",
 									"line": 7,
 									"character": 1,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L7"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L7"
 								}
 							],
 							"type": {
@@ -62,22 +63,22 @@
 						{
 							"title": "Enumeration Members",
 							"children": [
-								5,
-								4
+								33,
+								32
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "app-flow.ts",
+							"fileName": "business/service/app-flow.ts",
 							"line": 6,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L6"
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L6"
 						}
 					]
 				},
 				{
-					"id": 6,
+					"id": 34,
 					"name": "AppFlow",
 					"variant": "declaration",
 					"kind": 128,
@@ -86,7 +87,7 @@
 					},
 					"children": [
 						{
-							"id": 17,
+							"id": 45,
 							"name": "constructor",
 							"variant": "declaration",
 							"kind": 512,
@@ -95,30 +96,30 @@
 							},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
+									"fileName": "business/service/app-flow.ts",
 									"line": 14,
 									"character": 1,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L14"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L14"
 								}
 							],
 							"signatures": [
 								{
-									"id": 18,
-									"name": "new AppFlow",
+									"id": 46,
+									"name": "AppFlow",
 									"variant": "signature",
 									"kind": 16384,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "app-flow.ts",
+											"fileName": "business/service/app-flow.ts",
 											"line": 14,
 											"character": 1,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L14"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L14"
 										}
 									],
 									"parameters": [
 										{
-											"id": 19,
+											"id": 47,
 											"name": "args",
 											"variant": "param",
 											"kind": 32768,
@@ -127,7 +128,7 @@
 											},
 											"type": {
 												"type": "reference",
-												"target": 2,
+												"target": 30,
 												"name": "FlowList",
 												"package": "@beecode/msh-app-boot"
 											}
@@ -135,7 +136,7 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 6,
+										"target": 34,
 										"name": "AppFlow",
 										"package": "@beecode/msh-app-boot"
 									}
@@ -143,7 +144,7 @@
 							]
 						},
 						{
-							"id": 20,
+							"id": 48,
 							"name": "_flowList",
 							"variant": "declaration",
 							"kind": 1024,
@@ -153,21 +154,21 @@
 							},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
+									"fileName": "business/service/app-flow.ts",
 									"line": 12,
 									"character": 20,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L12"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L12"
 								}
 							],
 							"type": {
 								"type": "reference",
-								"target": 2,
+								"target": 30,
 								"name": "FlowList",
 								"package": "@beecode/msh-app-boot"
 							}
 						},
 						{
-							"id": 25,
+							"id": 53,
 							"name": "_topLevelReversedFlowList",
 							"variant": "declaration",
 							"kind": 2048,
@@ -176,30 +177,30 @@
 							},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
-									"line": 26,
+									"fileName": "business/service/app-flow.ts",
+									"line": 29,
 									"character": 11,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L26"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L29"
 								}
 							],
 							"signatures": [
 								{
-									"id": 26,
+									"id": 54,
 									"name": "_topLevelReversedFlowList",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "app-flow.ts",
-											"line": 26,
+											"fileName": "business/service/app-flow.ts",
+											"line": 29,
 											"character": 11,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L26"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L29"
 										}
 									],
 									"type": {
 										"type": "reference",
-										"target": 2,
+										"target": 30,
 										"name": "FlowList",
 										"package": "@beecode/msh-app-boot"
 									}
@@ -207,38 +208,39 @@
 							]
 						},
 						{
-							"id": 21,
+							"id": 49,
 							"name": "create",
 							"variant": "declaration",
 							"kind": 2048,
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
+									"fileName": "business/service/app-flow.ts",
 									"line": 18,
 									"character": 7,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L18"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L18"
 								}
 							],
 							"signatures": [
 								{
-									"id": 22,
+									"id": 50,
 									"name": "create",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "app-flow.ts",
+											"fileName": "business/service/app-flow.ts",
 											"line": 18,
 											"character": 7,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L18"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L18"
 										}
 									],
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
 											"qualifiedName": "Promise"
 										},
 										"typeArguments": [
@@ -254,38 +256,39 @@
 							]
 						},
 						{
-							"id": 23,
+							"id": 51,
 							"name": "destroy",
 							"variant": "declaration",
 							"kind": 2048,
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
+									"fileName": "business/service/app-flow.ts",
 									"line": 22,
 									"character": 7,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L22"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L22"
 								}
 							],
 							"signatures": [
 								{
-									"id": 24,
+									"id": 52,
 									"name": "destroy",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "app-flow.ts",
+											"fileName": "business/service/app-flow.ts",
 											"line": 22,
 											"character": 7,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L22"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L22"
 										}
 									],
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
 											"qualifiedName": "Promise"
 										},
 										"typeArguments": [
@@ -301,7 +304,7 @@
 							]
 						},
 						{
-							"id": 7,
+							"id": 35,
 							"name": "DeepExecFlowList",
 							"variant": "declaration",
 							"kind": 2048,
@@ -310,30 +313,30 @@
 							},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
-									"line": 30,
+									"fileName": "business/service/app-flow.ts",
+									"line": 33,
 									"character": 14,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L33"
 								}
 							],
 							"signatures": [
 								{
-									"id": 8,
+									"id": 36,
 									"name": "DeepExecFlowList",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "app-flow.ts",
-											"line": 30,
+											"fileName": "business/service/app-flow.ts",
+											"line": 33,
 											"character": 14,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L33"
 										}
 									],
 									"parameters": [
 										{
-											"id": 9,
+											"id": 37,
 											"name": "params",
 											"variant": "param",
 											"kind": 32768,
@@ -341,50 +344,50 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 10,
+													"id": 38,
 													"name": "__type",
 													"variant": "declaration",
 													"kind": 65536,
 													"flags": {},
 													"children": [
 														{
-															"id": 12,
+															"id": 40,
 															"name": "direction",
 															"variant": "declaration",
 															"kind": 1024,
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "app-flow.ts",
-																	"line": 30,
+																	"fileName": "business/service/app-flow.ts",
+																	"line": 33,
 																	"character": 61,
-																	"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+																	"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L33"
 																}
 															],
 															"type": {
 																"type": "reference",
-																"target": 3,
+																"target": 31,
 																"name": "FlowDirectionMapper",
 																"package": "@beecode/msh-app-boot"
 															}
 														},
 														{
-															"id": 11,
+															"id": 39,
 															"name": "flowList",
 															"variant": "declaration",
 															"kind": 1024,
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "app-flow.ts",
-																	"line": 30,
+																	"fileName": "business/service/app-flow.ts",
+																	"line": 33,
 																	"character": 41,
-																	"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
+																	"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L33"
 																}
 															],
 															"type": {
 																"type": "reference",
-																"target": 2,
+																"target": 30,
 																"name": "FlowList",
 																"package": "@beecode/msh-app-boot"
 															}
@@ -394,17 +397,9 @@
 														{
 															"title": "Properties",
 															"children": [
-																12,
-																11
+																40,
+																39
 															]
-														}
-													],
-													"sources": [
-														{
-															"fileName": "app-flow.ts",
-															"line": 30,
-															"character": 39,
-															"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L30"
 														}
 													]
 												}
@@ -414,7 +409,8 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
 											"qualifiedName": "Promise"
 										},
 										"typeArguments": [
@@ -430,7 +426,7 @@
 							]
 						},
 						{
-							"id": 13,
+							"id": 41,
 							"name": "ExecSyncFlowList",
 							"variant": "declaration",
 							"kind": 2048,
@@ -439,30 +435,30 @@
 							},
 							"sources": [
 								{
-									"fileName": "app-flow.ts",
-									"line": 49,
+									"fileName": "business/service/app-flow.ts",
+									"line": 52,
 									"character": 14,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L49"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L52"
 								}
 							],
 							"signatures": [
 								{
-									"id": 14,
+									"id": 42,
 									"name": "ExecSyncFlowList",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "app-flow.ts",
-											"line": 49,
+											"fileName": "business/service/app-flow.ts",
+											"line": 52,
 											"character": 14,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L49"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L52"
 										}
 									],
 									"parameters": [
 										{
-											"id": 15,
+											"id": 43,
 											"name": "lifeCycleList",
 											"variant": "param",
 											"kind": 32768,
@@ -471,7 +467,7 @@
 												"type": "array",
 												"elementType": {
 													"type": "reference",
-													"target": 51,
+													"target": 56,
 													"typeArguments": [
 														{
 															"type": "intrinsic",
@@ -484,14 +480,14 @@
 											}
 										},
 										{
-											"id": 16,
+											"id": 44,
 											"name": "createOrDestroy",
 											"variant": "param",
 											"kind": 32768,
 											"flags": {},
 											"type": {
 												"type": "reference",
-												"target": 3,
+												"target": 31,
 												"name": "FlowDirectionMapper",
 												"package": "@beecode/msh-app-boot"
 											}
@@ -500,7 +496,8 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
 											"qualifiedName": "Promise"
 										},
 										"typeArguments": [
@@ -520,47 +517,47 @@
 						{
 							"title": "Constructors",
 							"children": [
-								17
+								45
 							]
 						},
 						{
 							"title": "Properties",
 							"children": [
-								20
+								48
 							]
 						},
 						{
 							"title": "Methods",
 							"children": [
-								25,
-								21,
-								23,
-								7,
-								13
+								53,
+								49,
+								51,
+								35,
+								41
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "app-flow.ts",
+							"fileName": "business/service/app-flow.ts",
 							"line": 11,
 							"character": 22,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L11"
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L11"
 						}
 					]
 				},
 				{
-					"id": 2,
+					"id": 30,
 					"name": "FlowList",
 					"variant": "declaration",
 					"kind": 2097152,
 					"flags": {},
 					"sources": [
 						{
-							"fileName": "app-flow.ts",
+							"fileName": "business/service/app-flow.ts",
 							"line": 4,
 							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L4"
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L4"
 						}
 					],
 					"type": {
@@ -570,7 +567,7 @@
 							"types": [
 								{
 									"type": "reference",
-									"target": 51,
+									"target": 56,
 									"name": "LifeCycle",
 									"package": "@beecode/msh-app-boot"
 								},
@@ -578,7 +575,7 @@
 									"type": "array",
 									"elementType": {
 										"type": "reference",
-										"target": 51,
+										"target": 56,
 										"name": "LifeCycle",
 										"package": "@beecode/msh-app-boot"
 									}
@@ -592,666 +589,40 @@
 				{
 					"title": "Enumerations",
 					"children": [
-						3
+						31
 					]
 				},
 				{
 					"title": "Classes",
 					"children": [
-						6
+						34
 					]
 				},
 				{
 					"title": "Type Aliases",
 					"children": [
-						2
+						30
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "app-flow.ts",
+					"fileName": "business/service/app-flow.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-flow.ts#L1"
+					"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/app-flow.ts#L1"
 				}
 			]
 		},
 		{
-			"id": 27,
-			"name": "app-starter",
+			"id": 55,
+			"name": "business/service/life-cycle",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 28,
-					"name": "AppStarterStatusMapper",
-					"variant": "declaration",
-					"kind": 8,
-					"flags": {},
-					"children": [
-						{
-							"id": 29,
-							"name": "STARTED",
-							"variant": "declaration",
-							"kind": 16,
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 5,
-									"character": 1,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L5"
-								}
-							],
-							"type": {
-								"type": "literal",
-								"value": "started"
-							}
-						},
-						{
-							"id": 30,
-							"name": "STOPPED",
-							"variant": "declaration",
-							"kind": 16,
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 6,
-									"character": 1,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L6"
-								}
-							],
-							"type": {
-								"type": "literal",
-								"value": "stopped"
-							}
-						}
-					],
-					"groups": [
-						{
-							"title": "Enumeration Members",
-							"children": [
-								29,
-								30
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "app-starter.ts",
-							"line": 4,
-							"character": 12,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L4"
-						}
-					]
-				},
-				{
-					"id": 31,
-					"name": "AppStarter",
-					"variant": "declaration",
-					"kind": 128,
-					"flags": {},
-					"children": [
-						{
-							"id": 32,
-							"name": "constructor",
-							"variant": "declaration",
-							"kind": 512,
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 13,
-									"character": 1,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L13"
-								}
-							],
-							"signatures": [
-								{
-									"id": 33,
-									"name": "new AppStarter",
-									"variant": "signature",
-									"kind": 16384,
-									"flags": {},
-									"sources": [
-										{
-											"fileName": "app-starter.ts",
-											"line": 13,
-											"character": 1,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L13"
-										}
-									],
-									"parameters": [
-										{
-											"id": 34,
-											"name": "appFlow",
-											"variant": "param",
-											"kind": 32768,
-											"flags": {},
-											"type": {
-												"type": "reference",
-												"target": 6,
-												"name": "AppFlow",
-												"package": "@beecode/msh-app-boot"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"target": 31,
-										"name": "AppStarter",
-										"package": "@beecode/msh-app-boot"
-									}
-								}
-							]
-						},
-						{
-							"id": 35,
-							"name": "_flow",
-							"variant": "declaration",
-							"kind": 1024,
-							"flags": {
-								"isProtected": true
-							},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 10,
-									"character": 11,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L10"
-								}
-							],
-							"type": {
-								"type": "reference",
-								"target": 6,
-								"name": "AppFlow",
-								"package": "@beecode/msh-app-boot"
-							}
-						},
-						{
-							"id": 36,
-							"name": "_status",
-							"variant": "declaration",
-							"kind": 1024,
-							"flags": {
-								"isProtected": true
-							},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 11,
-									"character": 11,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L11"
-								}
-							],
-							"type": {
-								"type": "reference",
-								"target": 28,
-								"name": "AppStarterStatusMapper",
-								"package": "@beecode/msh-app-boot"
-							},
-							"defaultValue": "AppStarterStatusMapper.STOPPED"
-						},
-						{
-							"id": 41,
-							"name": "_gracefulStop",
-							"variant": "declaration",
-							"kind": 2048,
-							"flags": {
-								"isProtected": true
-							},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 40,
-									"character": 17,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L40"
-								}
-							],
-							"signatures": [
-								{
-									"id": 42,
-									"name": "_gracefulStop",
-									"variant": "signature",
-									"kind": 4096,
-									"flags": {},
-									"sources": [
-										{
-											"fileName": "app-starter.ts",
-											"line": 40,
-											"character": 17,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L40"
-										}
-									],
-									"type": {
-										"type": "reference",
-										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
-											"qualifiedName": "Promise"
-										},
-										"typeArguments": [
-											{
-												"type": "intrinsic",
-												"name": "void"
-											}
-										],
-										"name": "Promise",
-										"package": "typescript"
-									}
-								}
-							]
-						},
-						{
-							"id": 43,
-							"name": "_onError",
-							"variant": "declaration",
-							"kind": 2048,
-							"flags": {
-								"isProtected": true
-							},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 45,
-									"character": 17,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L45"
-								}
-							],
-							"signatures": [
-								{
-									"id": 44,
-									"name": "_onError",
-									"variant": "signature",
-									"kind": 4096,
-									"flags": {},
-									"sources": [
-										{
-											"fileName": "app-starter.ts",
-											"line": 45,
-											"character": 17,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L45"
-										}
-									],
-									"parameters": [
-										{
-											"id": 45,
-											"name": "err",
-											"variant": "param",
-											"kind": 32768,
-											"flags": {},
-											"type": {
-												"type": "reference",
-												"target": {
-													"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
-													"qualifiedName": "Error"
-												},
-												"name": "Error",
-												"package": "typescript"
-											}
-										}
-									],
-									"type": {
-										"type": "reference",
-										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
-											"qualifiedName": "Promise"
-										},
-										"typeArguments": [
-											{
-												"type": "intrinsic",
-												"name": "void"
-											}
-										],
-										"name": "Promise",
-										"package": "typescript"
-									}
-								}
-							]
-						},
-						{
-							"id": 39,
-							"name": "_registerOnExit",
-							"variant": "declaration",
-							"kind": 2048,
-							"flags": {
-								"isProtected": true
-							},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 32,
-									"character": 11,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L32"
-								}
-							],
-							"signatures": [
-								{
-									"id": 40,
-									"name": "_registerOnExit",
-									"variant": "signature",
-									"kind": 4096,
-									"flags": {},
-									"sources": [
-										{
-											"fileName": "app-starter.ts",
-											"line": 32,
-											"character": 11,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L32"
-										}
-									],
-									"type": {
-										"type": "intrinsic",
-										"name": "void"
-									}
-								}
-							]
-						},
-						{
-							"id": 37,
-							"name": "start",
-							"variant": "declaration",
-							"kind": 2048,
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 17,
-									"character": 7,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L17"
-								}
-							],
-							"signatures": [
-								{
-									"id": 38,
-									"name": "start",
-									"variant": "signature",
-									"kind": 4096,
-									"flags": {},
-									"sources": [
-										{
-											"fileName": "app-starter.ts",
-											"line": 17,
-											"character": 7,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L17"
-										}
-									],
-									"type": {
-										"type": "reference",
-										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
-											"qualifiedName": "Promise"
-										},
-										"typeArguments": [
-											{
-												"type": "intrinsic",
-												"name": "void"
-											}
-										],
-										"name": "Promise",
-										"package": "typescript"
-									}
-								}
-							]
-						},
-						{
-							"id": 46,
-							"name": "stop",
-							"variant": "declaration",
-							"kind": 2048,
-							"flags": {},
-							"sources": [
-								{
-									"fileName": "app-starter.ts",
-									"line": 51,
-									"character": 7,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L51"
-								}
-							],
-							"signatures": [
-								{
-									"id": 47,
-									"name": "stop",
-									"variant": "signature",
-									"kind": 4096,
-									"flags": {},
-									"sources": [
-										{
-											"fileName": "app-starter.ts",
-											"line": 51,
-											"character": 7,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L51"
-										}
-									],
-									"type": {
-										"type": "reference",
-										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
-											"qualifiedName": "Promise"
-										},
-										"typeArguments": [
-											{
-												"type": "intrinsic",
-												"name": "void"
-											}
-										],
-										"name": "Promise",
-										"package": "typescript"
-									}
-								}
-							]
-						}
-					],
-					"groups": [
-						{
-							"title": "Constructors",
-							"children": [
-								32
-							]
-						},
-						{
-							"title": "Properties",
-							"children": [
-								35,
-								36
-							]
-						},
-						{
-							"title": "Methods",
-							"children": [
-								41,
-								43,
-								39,
-								37,
-								46
-							]
-						}
-					],
-					"sources": [
-						{
-							"fileName": "app-starter.ts",
-							"line": 9,
-							"character": 13,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L9"
-						}
-					]
-				}
-			],
-			"groups": [
-				{
-					"title": "Enumerations",
-					"children": [
-						28
-					]
-				},
-				{
-					"title": "Classes",
-					"children": [
-						31
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "app-starter.ts",
-					"line": 1,
-					"character": 0,
-					"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/app-starter.ts#L1"
-				}
-			]
-		},
-		{
-			"id": 49,
-			"name": "index",
-			"variant": "declaration",
-			"kind": 2,
-			"flags": {},
-			"children": [
-				{
-					"id": 75,
-					"name": "AppFlow",
-					"variant": "reference",
-					"kind": 4194304,
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "index.ts",
-							"line": 4,
-							"character": 9,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/index.ts#L4"
-						}
-					],
-					"target": 6
-				},
-				{
-					"id": 78,
-					"name": "AppStarter",
-					"variant": "reference",
-					"kind": 4194304,
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "index.ts",
-							"line": 6,
-							"character": 9,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/index.ts#L6"
-						}
-					],
-					"target": 31
-				},
-				{
-					"id": 79,
-					"name": "AppStarterStatusMapper",
-					"variant": "reference",
-					"kind": 4194304,
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "index.ts",
-							"line": 6,
-							"character": 21,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/index.ts#L6"
-						}
-					],
-					"target": 28
-				},
-				{
-					"id": 77,
-					"name": "FlowDirectionMapper",
-					"variant": "reference",
-					"kind": 4194304,
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "index.ts",
-							"line": 4,
-							"character": 28,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/index.ts#L4"
-						}
-					],
-					"target": 3
-				},
-				{
-					"id": 76,
-					"name": "FlowList",
-					"variant": "reference",
-					"kind": 4194304,
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "index.ts",
-							"line": 4,
-							"character": 18,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/index.ts#L4"
-						}
-					],
-					"target": 2
-				},
-				{
-					"id": 74,
-					"name": "LifeCycle",
-					"variant": "reference",
-					"kind": 4194304,
-					"flags": {},
-					"sources": [
-						{
-							"fileName": "index.ts",
-							"line": 2,
-							"character": 9,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/index.ts#L2"
-						}
-					],
-					"target": 51
-				}
-			],
-			"groups": [
-				{
-					"title": "References",
-					"children": [
-						75,
-						78,
-						79,
-						77,
-						76,
-						74
-					]
-				}
-			],
-			"sources": [
-				{
-					"fileName": "index.ts",
-					"line": 1,
-					"character": 0,
-					"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/index.ts#L1"
-				}
-			]
-		},
-		{
-			"id": 48,
-			"name": "index-jest-setup",
-			"variant": "declaration",
-			"kind": 2,
-			"flags": {},
-			"sources": [
-				{
-					"fileName": "index-jest-setup.ts",
-					"line": 1,
-					"character": 0,
-					"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/index-jest-setup.ts#L1"
-				}
-			]
-		},
-		{
-			"id": 50,
-			"name": "life-cycle",
-			"variant": "declaration",
-			"kind": 2,
-			"flags": {},
-			"children": [
-				{
-					"id": 51,
+					"id": 56,
 					"name": "LifeCycle",
 					"variant": "declaration",
 					"kind": 128,
@@ -1260,7 +631,7 @@
 					},
 					"children": [
 						{
-							"id": 52,
+							"id": 58,
 							"name": "constructor",
 							"variant": "declaration",
 							"kind": 512,
@@ -1269,30 +640,30 @@
 							},
 							"sources": [
 								{
-									"fileName": "life-cycle.ts",
-									"line": 9,
+									"fileName": "business/service/life-cycle.ts",
+									"line": 10,
 									"character": 1,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L9"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L10"
 								}
 							],
 							"signatures": [
 								{
-									"id": 53,
-									"name": "new LifeCycle",
+									"id": 59,
+									"name": "LifeCycle",
 									"variant": "signature",
 									"kind": 16384,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "life-cycle.ts",
-											"line": 9,
+											"fileName": "business/service/life-cycle.ts",
+											"line": 10,
 											"character": 1,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L9"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L10"
 										}
 									],
-									"typeParameter": [
+									"typeParameters": [
 										{
-											"id": 54,
+											"id": 60,
 											"name": "T",
 											"variant": "typeParam",
 											"kind": 131072,
@@ -1305,7 +676,7 @@
 									],
 									"parameters": [
 										{
-											"id": 55,
+											"id": 61,
 											"name": "params",
 											"variant": "param",
 											"kind": 32768,
@@ -1313,24 +684,24 @@
 											"type": {
 												"type": "reflection",
 												"declaration": {
-													"id": 56,
+													"id": 62,
 													"name": "__type",
 													"variant": "declaration",
 													"kind": 65536,
 													"flags": {},
 													"children": [
 														{
-															"id": 57,
+															"id": 63,
 															"name": "name",
 															"variant": "declaration",
 															"kind": 1024,
 															"flags": {},
 															"sources": [
 																{
-																	"fileName": "life-cycle.ts",
-																	"line": 9,
+																	"fileName": "business/service/life-cycle.ts",
+																	"line": 10,
 																	"character": 33,
-																	"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L9"
+																	"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L10"
 																}
 															],
 															"type": {
@@ -1343,16 +714,8 @@
 														{
 															"title": "Properties",
 															"children": [
-																57
+																63
 															]
-														}
-													],
-													"sources": [
-														{
-															"fileName": "life-cycle.ts",
-															"line": 9,
-															"character": 31,
-															"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L9"
 														}
 													]
 												}
@@ -1361,11 +724,11 @@
 									],
 									"type": {
 										"type": "reference",
-										"target": 51,
+										"target": 56,
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 54,
+												"target": 57,
 												"name": "T",
 												"package": "@beecode/msh-app-boot",
 												"qualifiedName": "LifeCycle.T",
@@ -1379,7 +742,7 @@
 							]
 						},
 						{
-							"id": 62,
+							"id": 68,
 							"name": "name",
 							"variant": "declaration",
 							"kind": 1024,
@@ -1388,10 +751,10 @@
 							},
 							"sources": [
 								{
-									"fileName": "life-cycle.ts",
-									"line": 7,
+									"fileName": "business/service/life-cycle.ts",
+									"line": 8,
 									"character": 10,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L7"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L8"
 								}
 							],
 							"type": {
@@ -1400,7 +763,7 @@
 							}
 						},
 						{
-							"id": 58,
+							"id": 64,
 							"name": "_createFn",
 							"variant": "declaration",
 							"kind": 2048,
@@ -1410,37 +773,38 @@
 							},
 							"sources": [
 								{
-									"fileName": "life-cycle.ts",
-									"line": 4,
+									"fileName": "business/service/life-cycle.ts",
+									"line": 5,
 									"character": 20,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L4"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L5"
 								}
 							],
 							"signatures": [
 								{
-									"id": 59,
+									"id": 65,
 									"name": "_createFn",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "life-cycle.ts",
-											"line": 4,
+											"fileName": "business/service/life-cycle.ts",
+											"line": 5,
 											"character": 20,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L4"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L5"
 										}
 									],
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
 											"qualifiedName": "Promise"
 										},
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 54,
+												"target": 57,
 												"name": "T",
 												"package": "@beecode/msh-app-boot",
 												"qualifiedName": "LifeCycle.T",
@@ -1454,7 +818,7 @@
 							]
 						},
 						{
-							"id": 60,
+							"id": 66,
 							"name": "_destroyFn",
 							"variant": "declaration",
 							"kind": 2048,
@@ -1464,37 +828,38 @@
 							},
 							"sources": [
 								{
-									"fileName": "life-cycle.ts",
-									"line": 5,
+									"fileName": "business/service/life-cycle.ts",
+									"line": 6,
 									"character": 20,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L5"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L6"
 								}
 							],
 							"signatures": [
 								{
-									"id": 61,
+									"id": 67,
 									"name": "_destroyFn",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "life-cycle.ts",
-											"line": 5,
+											"fileName": "business/service/life-cycle.ts",
+											"line": 6,
 											"character": 20,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L5"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L6"
 										}
 									],
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
 											"qualifiedName": "Promise"
 										},
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 54,
+												"target": 57,
 												"name": "T",
 												"package": "@beecode/msh-app-boot",
 												"qualifiedName": "LifeCycle.T",
@@ -1508,44 +873,45 @@
 							]
 						},
 						{
-							"id": 63,
+							"id": 69,
 							"name": "create",
 							"variant": "declaration",
 							"kind": 2048,
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "life-cycle.ts",
-									"line": 14,
+									"fileName": "business/service/life-cycle.ts",
+									"line": 15,
 									"character": 7,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L14"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L15"
 								}
 							],
 							"signatures": [
 								{
-									"id": 64,
+									"id": 70,
 									"name": "create",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "life-cycle.ts",
-											"line": 14,
+											"fileName": "business/service/life-cycle.ts",
+											"line": 15,
 											"character": 7,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L14"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L15"
 										}
 									],
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
 											"qualifiedName": "Promise"
 										},
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 54,
+												"target": 57,
 												"name": "T",
 												"package": "@beecode/msh-app-boot",
 												"qualifiedName": "LifeCycle.T",
@@ -1559,44 +925,45 @@
 							]
 						},
 						{
-							"id": 65,
+							"id": 71,
 							"name": "destroy",
 							"variant": "declaration",
 							"kind": 2048,
 							"flags": {},
 							"sources": [
 								{
-									"fileName": "life-cycle.ts",
-									"line": 22,
+									"fileName": "business/service/life-cycle.ts",
+									"line": 23,
 									"character": 7,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L22"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L23"
 								}
 							],
 							"signatures": [
 								{
-									"id": 66,
+									"id": 72,
 									"name": "destroy",
 									"variant": "signature",
 									"kind": 4096,
 									"flags": {},
 									"sources": [
 										{
-											"fileName": "life-cycle.ts",
-											"line": 22,
+											"fileName": "business/service/life-cycle.ts",
+											"line": 23,
 											"character": 7,
-											"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L22"
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L23"
 										}
 									],
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../../node_modules/typescript/lib/lib.es5.d.ts",
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
 											"qualifiedName": "Promise"
 										},
 										"typeArguments": [
 											{
 												"type": "reference",
-												"target": 54,
+												"target": 57,
 												"name": "T",
 												"package": "@beecode/msh-app-boot",
 												"qualifiedName": "LifeCycle.T",
@@ -1614,36 +981,36 @@
 						{
 							"title": "Constructors",
 							"children": [
-								52
+								58
 							]
 						},
 						{
 							"title": "Properties",
 							"children": [
-								62
+								68
 							]
 						},
 						{
 							"title": "Methods",
 							"children": [
-								58,
-								60,
-								63,
-								65
+								64,
+								66,
+								69,
+								71
 							]
 						}
 					],
 					"sources": [
 						{
-							"fileName": "life-cycle.ts",
-							"line": 3,
+							"fileName": "business/service/life-cycle.ts",
+							"line": 4,
 							"character": 22,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L3"
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L4"
 						}
 					],
 					"typeParameters": [
 						{
-							"id": 67,
+							"id": 57,
 							"name": "T",
 							"variant": "typeParam",
 							"kind": 131072,
@@ -1660,28 +1027,661 @@
 				{
 					"title": "Classes",
 					"children": [
-						51
+						56
 					]
 				}
 			],
 			"sources": [
 				{
-					"fileName": "life-cycle.ts",
+					"fileName": "business/service/life-cycle.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/life-cycle.ts#L1"
+					"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/business/service/life-cycle.ts#L1"
 				}
 			]
 		},
 		{
-			"id": 68,
+			"id": 2,
+			"name": "controller/app-starter",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 3,
+					"name": "AppStarterStatusMapper",
+					"variant": "declaration",
+					"kind": 8,
+					"flags": {},
+					"children": [
+						{
+							"id": 4,
+							"name": "STARTED",
+							"variant": "declaration",
+							"kind": 16,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 5,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L5"
+								}
+							],
+							"type": {
+								"type": "literal",
+								"value": "started"
+							}
+						},
+						{
+							"id": 5,
+							"name": "STOPPED",
+							"variant": "declaration",
+							"kind": 16,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 6,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L6"
+								}
+							],
+							"type": {
+								"type": "literal",
+								"value": "stopped"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Enumeration Members",
+							"children": [
+								4,
+								5
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "controller/app-starter.ts",
+							"line": 4,
+							"character": 12,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L4"
+						}
+					]
+				},
+				{
+					"id": 6,
+					"name": "AppStarter",
+					"variant": "declaration",
+					"kind": 128,
+					"flags": {},
+					"children": [
+						{
+							"id": 7,
+							"name": "constructor",
+							"variant": "declaration",
+							"kind": 512,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 13,
+									"character": 1,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L13"
+								}
+							],
+							"signatures": [
+								{
+									"id": 8,
+									"name": "AppStarter",
+									"variant": "signature",
+									"kind": 16384,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "controller/app-starter.ts",
+											"line": 13,
+											"character": 1,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L13"
+										}
+									],
+									"parameters": [
+										{
+											"id": 9,
+											"name": "appFlow",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 34,
+												"name": "AppFlow",
+												"package": "@beecode/msh-app-boot"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 6,
+										"name": "AppStarter",
+										"package": "@beecode/msh-app-boot"
+									}
+								}
+							]
+						},
+						{
+							"id": 10,
+							"name": "_flow",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 10,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L10"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 34,
+								"name": "AppFlow",
+								"package": "@beecode/msh-app-boot"
+							}
+						},
+						{
+							"id": 11,
+							"name": "_status",
+							"variant": "declaration",
+							"kind": 1024,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 11,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L11"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 3,
+								"name": "AppStarterStatusMapper",
+								"package": "@beecode/msh-app-boot"
+							},
+							"defaultValue": "AppStarterStatusMapper.STOPPED"
+						},
+						{
+							"id": 16,
+							"name": "_gracefulStop",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 47,
+									"character": 17,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L47"
+								}
+							],
+							"signatures": [
+								{
+									"id": 17,
+									"name": "_gracefulStop",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "controller/app-starter.ts",
+											"line": 47,
+											"character": 17,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L47"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 18,
+							"name": "_onError",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 52,
+									"character": 17,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L52"
+								}
+							],
+							"signatures": [
+								{
+									"id": 19,
+									"name": "_onError",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "controller/app-starter.ts",
+											"line": 52,
+											"character": 17,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L52"
+										}
+									],
+									"parameters": [
+										{
+											"id": 20,
+											"name": "err",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "typescript",
+													"packagePath": "lib/lib.es5.d.ts",
+													"qualifiedName": "Error"
+												},
+												"name": "Error",
+												"package": "typescript"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 14,
+							"name": "_registerOnExit",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {
+								"isProtected": true
+							},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 32,
+									"character": 11,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L32"
+								}
+							],
+							"signatures": [
+								{
+									"id": 15,
+									"name": "_registerOnExit",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "controller/app-starter.ts",
+											"line": 32,
+											"character": 11,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L32"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							]
+						},
+						{
+							"id": 12,
+							"name": "start",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 17,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L17"
+								}
+							],
+							"signatures": [
+								{
+									"id": 13,
+									"name": "start",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "controller/app-starter.ts",
+											"line": 17,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L17"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						},
+						{
+							"id": 21,
+							"name": "stop",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "controller/app-starter.ts",
+									"line": 58,
+									"character": 7,
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L58"
+								}
+							],
+							"signatures": [
+								{
+									"id": 22,
+									"name": "stop",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "controller/app-starter.ts",
+											"line": 58,
+											"character": 7,
+											"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L58"
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
+											"qualifiedName": "Promise"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "void"
+											}
+										],
+										"name": "Promise",
+										"package": "typescript"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"children": [
+								7
+							]
+						},
+						{
+							"title": "Properties",
+							"children": [
+								10,
+								11
+							]
+						},
+						{
+							"title": "Methods",
+							"children": [
+								16,
+								18,
+								14,
+								12,
+								21
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "controller/app-starter.ts",
+							"line": 9,
+							"character": 13,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L9"
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Enumerations",
+					"children": [
+						3
+					]
+				},
+				{
+					"title": "Classes",
+					"children": [
+						6
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "controller/app-starter.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/controller/app-starter.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "index",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 74,
+					"name": "AppFlow",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 4,
+							"character": 9,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/index.ts#L4"
+						}
+					],
+					"target": 34
+				},
+				{
+					"id": 77,
+					"name": "AppStarter",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 6,
+							"character": 9,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/index.ts#L6"
+						}
+					],
+					"target": 6
+				},
+				{
+					"id": 78,
+					"name": "AppStarterStatusMapper",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 6,
+							"character": 21,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/index.ts#L6"
+						}
+					],
+					"target": 3
+				},
+				{
+					"id": 76,
+					"name": "FlowDirectionMapper",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 4,
+							"character": 28,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/index.ts#L4"
+						}
+					],
+					"target": 31
+				},
+				{
+					"id": 75,
+					"name": "FlowList",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 4,
+							"character": 18,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/index.ts#L4"
+						}
+					],
+					"target": 30
+				},
+				{
+					"id": 73,
+					"name": "LifeCycle",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 2,
+							"character": 9,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/index.ts#L2"
+						}
+					],
+					"target": 56
+				},
+				{
+					"id": 79,
+					"name": "setAppBootLogger",
+					"variant": "reference",
+					"kind": 4194304,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 8,
+							"character": 9,
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/index.ts#L8"
+						}
+					],
+					"target": 24
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"children": [
+						74,
+						77,
+						78,
+						76,
+						75,
+						73,
+						79
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 1,
+					"character": 0,
+					"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/index.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 23,
 			"name": "util/logger",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 72,
+					"id": 27,
 					"name": "logger",
 					"variant": "declaration",
 					"kind": 64,
@@ -1691,12 +1691,12 @@
 							"fileName": "util/logger.ts",
 							"line": 12,
 							"character": 13,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/util/logger.ts#L12"
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/util/logger.ts#L12"
 						}
 					],
 					"signatures": [
 						{
-							"id": 73,
+							"id": 28,
 							"name": "logger",
 							"variant": "signature",
 							"kind": 4096,
@@ -1706,13 +1706,14 @@
 									"fileName": "util/logger.ts",
 									"line": 12,
 									"character": 22,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/util/logger.ts#L12"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/util/logger.ts#L12"
 								}
 							],
 							"type": {
 								"type": "reference",
 								"target": {
-									"sourceFileName": "../logger/src/logger-strategy.ts",
+									"packageName": "@beecode/msh-logger",
+									"packagePath": "src/business/service/logger-strategy.ts",
 									"qualifiedName": "LoggerStrategy"
 								},
 								"name": "LoggerStrategy",
@@ -1722,7 +1723,7 @@
 					]
 				},
 				{
-					"id": 69,
+					"id": 24,
 					"name": "setAppBootLogger",
 					"variant": "declaration",
 					"kind": 64,
@@ -1732,12 +1733,12 @@
 							"fileName": "util/logger.ts",
 							"line": 8,
 							"character": 13,
-							"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/util/logger.ts#L8"
+							"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/util/logger.ts#L8"
 						}
 					],
 					"signatures": [
 						{
-							"id": 70,
+							"id": 25,
 							"name": "setAppBootLogger",
 							"variant": "signature",
 							"kind": 4096,
@@ -1747,12 +1748,12 @@
 									"fileName": "util/logger.ts",
 									"line": 8,
 									"character": 32,
-									"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/util/logger.ts#L8"
+									"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/util/logger.ts#L8"
 								}
 							],
 							"parameters": [
 								{
-									"id": 71,
+									"id": 26,
 									"name": "logger",
 									"variant": "param",
 									"kind": 32768,
@@ -1760,7 +1761,8 @@
 									"type": {
 										"type": "reference",
 										"target": {
-											"sourceFileName": "../logger/src/logger-strategy.ts",
+											"packageName": "@beecode/msh-logger",
+											"packagePath": "src/business/service/logger-strategy.ts",
 											"qualifiedName": "LoggerStrategy"
 										},
 										"name": "LoggerStrategy",
@@ -1780,8 +1782,8 @@
 				{
 					"title": "Functions",
 					"children": [
-						72,
-						69
+						27,
+						24
 					]
 				}
 			],
@@ -1790,7 +1792,7 @@
 					"fileName": "util/logger.ts",
 					"line": 1,
 					"character": 0,
-					"url": "https://github.com/beecode-rs/msh-app-boot/blob/ff89a8e/src/util/logger.ts#L1"
+					"url": "https://github.com/beecode-rs/msh-app-boot/blob/f03720bc0da2ffbc23eb0b04dd0c7dcf87ac181d/src/util/logger.ts#L1"
 				}
 			]
 		}
@@ -1799,332 +1801,426 @@
 		{
 			"title": "Modules",
 			"children": [
+				29,
+				55,
+				2,
 				1,
-				27,
-				49,
-				48,
-				50,
-				68
+				23
 			]
 		}
 	],
 	"packageName": "@beecode/msh-app-boot",
 	"symbolIdMap": {
 		"1": {
-			"sourceFileName": "src/app-flow.ts",
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/index.ts",
 			"qualifiedName": ""
 		},
 		"2": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "FlowList"
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
+			"qualifiedName": ""
 		},
 		"3": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "FlowDirectionMapper"
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
+			"qualifiedName": "AppStarterStatusMapper"
 		},
 		"4": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "FlowDirectionMapper.DESTROY"
-		},
-		"5": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "FlowDirectionMapper.CREATE"
-		},
-		"6": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow"
-		},
-		"7": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.DeepExecFlowList"
-		},
-		"8": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.DeepExecFlowList"
-		},
-		"9": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "params"
-		},
-		"10": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "__type"
-		},
-		"11": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "__type.flowList"
-		},
-		"12": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "__type.direction"
-		},
-		"13": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.ExecSyncFlowList"
-		},
-		"14": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.ExecSyncFlowList"
-		},
-		"15": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "lifeCycleList"
-		},
-		"16": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "createOrDestroy"
-		},
-		"17": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.__constructor"
-		},
-		"18": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow"
-		},
-		"19": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "args"
-		},
-		"20": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow._flowList"
-		},
-		"21": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.create"
-		},
-		"22": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.create"
-		},
-		"23": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.destroy"
-		},
-		"24": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow.destroy"
-		},
-		"25": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow._topLevelReversedFlowList"
-		},
-		"26": {
-			"sourceFileName": "src/app-flow.ts",
-			"qualifiedName": "AppFlow._topLevelReversedFlowList"
-		},
-		"27": {
-			"sourceFileName": "src/app-starter.ts",
-			"qualifiedName": ""
-		},
-		"28": {
-			"sourceFileName": "src/app-starter.ts",
-			"qualifiedName": "AppStarterStatusMapper"
-		},
-		"29": {
-			"sourceFileName": "src/app-starter.ts",
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarterStatusMapper.STARTED"
 		},
-		"30": {
-			"sourceFileName": "src/app-starter.ts",
+		"5": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarterStatusMapper.STOPPED"
 		},
-		"31": {
-			"sourceFileName": "src/app-starter.ts",
+		"6": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter"
 		},
-		"32": {
-			"sourceFileName": "src/app-starter.ts",
+		"7": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter.__constructor"
 		},
-		"33": {
-			"sourceFileName": "src/app-starter.ts",
+		"8": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter"
 		},
-		"34": {
-			"sourceFileName": "src/app-starter.ts",
+		"9": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "appFlow"
 		},
-		"35": {
-			"sourceFileName": "src/app-starter.ts",
+		"10": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter._flow"
 		},
-		"36": {
-			"sourceFileName": "src/app-starter.ts",
+		"11": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter._status"
 		},
-		"37": {
-			"sourceFileName": "src/app-starter.ts",
+		"12": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter.start"
 		},
-		"38": {
-			"sourceFileName": "src/app-starter.ts",
+		"13": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter.start"
 		},
-		"39": {
-			"sourceFileName": "src/app-starter.ts",
+		"14": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter._registerOnExit"
 		},
-		"40": {
-			"sourceFileName": "src/app-starter.ts",
+		"15": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter._registerOnExit"
 		},
-		"41": {
-			"sourceFileName": "src/app-starter.ts",
+		"16": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter._gracefulStop"
 		},
-		"42": {
-			"sourceFileName": "src/app-starter.ts",
+		"17": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter._gracefulStop"
 		},
-		"43": {
-			"sourceFileName": "src/app-starter.ts",
+		"18": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter._onError"
 		},
-		"44": {
-			"sourceFileName": "src/app-starter.ts",
+		"19": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter._onError"
 		},
-		"45": {
-			"sourceFileName": "src/app-starter.ts",
+		"20": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "err"
 		},
-		"46": {
-			"sourceFileName": "src/app-starter.ts",
+		"21": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter.stop"
 		},
-		"47": {
-			"sourceFileName": "src/app-starter.ts",
+		"22": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/controller/app-starter.ts",
 			"qualifiedName": "AppStarter.stop"
 		},
-		"48": {
-			"sourceFileName": "src/index-jest-setup.ts",
+		"23": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/util/logger.ts",
 			"qualifiedName": ""
 		},
-		"49": {
-			"sourceFileName": "src/index.ts",
-			"qualifiedName": ""
-		},
-		"50": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": ""
-		},
-		"51": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle"
-		},
-		"52": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle.__constructor"
-		},
-		"53": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle"
-		},
-		"54": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle.T"
-		},
-		"55": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "params"
-		},
-		"56": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "__type"
-		},
-		"57": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "__type.name"
-		},
-		"58": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle._createFn"
-		},
-		"59": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle._createFn"
-		},
-		"60": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle._destroyFn"
-		},
-		"61": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle._destroyFn"
-		},
-		"62": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle.name"
-		},
-		"63": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle.create"
-		},
-		"64": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle.create"
-		},
-		"65": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle.destroy"
-		},
-		"66": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle.destroy"
-		},
-		"67": {
-			"sourceFileName": "src/life-cycle.ts",
-			"qualifiedName": "LifeCycle.T"
-		},
-		"68": {
-			"sourceFileName": "src/util/logger.ts",
-			"qualifiedName": ""
-		},
-		"69": {
-			"sourceFileName": "src/util/logger.ts",
+		"24": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/util/logger.ts",
 			"qualifiedName": "setAppBootLogger"
 		},
-		"70": {
-			"sourceFileName": "src/util/logger.ts",
+		"25": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/util/logger.ts",
 			"qualifiedName": "setAppBootLogger"
 		},
-		"71": {
-			"sourceFileName": "src/util/logger.ts",
+		"26": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/util/logger.ts",
 			"qualifiedName": "logger"
 		},
-		"72": {
-			"sourceFileName": "src/util/logger.ts",
+		"27": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/util/logger.ts",
 			"qualifiedName": "logger"
 		},
-		"73": {
-			"sourceFileName": "src/util/logger.ts",
+		"28": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/util/logger.ts",
 			"qualifiedName": "logger"
 		},
-		"74": {
-			"sourceFileName": "src/index.ts",
-			"qualifiedName": "LifeCycle"
+		"29": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": ""
 		},
-		"75": {
-			"sourceFileName": "src/index.ts",
-			"qualifiedName": "AppFlow"
-		},
-		"76": {
-			"sourceFileName": "src/index.ts",
+		"30": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
 			"qualifiedName": "FlowList"
 		},
-		"77": {
-			"sourceFileName": "src/index.ts",
+		"31": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
 			"qualifiedName": "FlowDirectionMapper"
 		},
-		"78": {
-			"sourceFileName": "src/index.ts",
+		"32": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "FlowDirectionMapper.DESTROY"
+		},
+		"33": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "FlowDirectionMapper.CREATE"
+		},
+		"34": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow"
+		},
+		"35": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.DeepExecFlowList"
+		},
+		"36": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.DeepExecFlowList"
+		},
+		"37": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "params"
+		},
+		"38": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "__type"
+		},
+		"39": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "__type.flowList"
+		},
+		"40": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "__type.direction"
+		},
+		"41": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.ExecSyncFlowList"
+		},
+		"42": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.ExecSyncFlowList"
+		},
+		"43": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "lifeCycleList"
+		},
+		"44": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "createOrDestroy"
+		},
+		"45": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.__constructor"
+		},
+		"46": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow"
+		},
+		"47": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "args"
+		},
+		"48": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow._flowList"
+		},
+		"49": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.create"
+		},
+		"50": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.create"
+		},
+		"51": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.destroy"
+		},
+		"52": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow.destroy"
+		},
+		"53": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow._topLevelReversedFlowList"
+		},
+		"54": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/app-flow.ts",
+			"qualifiedName": "AppFlow._topLevelReversedFlowList"
+		},
+		"55": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": ""
+		},
+		"56": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle"
+		},
+		"57": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle.T"
+		},
+		"58": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle.__constructor"
+		},
+		"59": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle"
+		},
+		"60": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle.T"
+		},
+		"61": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "params"
+		},
+		"62": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "__type"
+		},
+		"63": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "__type.name"
+		},
+		"64": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle._createFn"
+		},
+		"65": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle._createFn"
+		},
+		"66": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle._destroyFn"
+		},
+		"67": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle._destroyFn"
+		},
+		"68": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle.name"
+		},
+		"69": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle.create"
+		},
+		"70": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle.create"
+		},
+		"71": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle.destroy"
+		},
+		"72": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/business/service/life-cycle.ts",
+			"qualifiedName": "LifeCycle.destroy"
+		},
+		"73": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "LifeCycle"
+		},
+		"74": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "AppFlow"
+		},
+		"75": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "FlowList"
+		},
+		"76": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "FlowDirectionMapper"
+		},
+		"77": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/index.ts",
 			"qualifiedName": "AppStarter"
 		},
-		"79": {
-			"sourceFileName": "src/index.ts",
+		"78": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/index.ts",
 			"qualifiedName": "AppStarterStatusMapper"
+		},
+		"79": {
+			"packageName": "@beecode/msh-app-boot",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "setAppBootLogger"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "src/index.ts",
+			"2": "src/controller/app-starter.ts",
+			"3": "src/util/logger.ts",
+			"4": "src/business/service/app-flow.ts",
+			"5": "src/business/service/life-cycle.ts"
+		},
+		"reflections": {
+			"1": 1,
+			"2": 2,
+			"3": 23,
+			"4": 29,
+			"5": 55
 		}
 	}
 }

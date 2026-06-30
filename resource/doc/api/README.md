@@ -1,14 +1,13 @@
-@beecode/msh-app-boot
+**@beecode/msh-app-boot**
+
+***
 
 # @beecode/msh-app-boot
 
-## Table of contents
+## Modules
 
-### Modules
-
-- [app-flow](modules/app_flow.md)
-- [app-starter](modules/app_starter.md)
-- [index](modules/index.md)
-- [index-jest-setup](modules/index_jest_setup.md)
-- [life-cycle](modules/life_cycle.md)
-- [util/logger](modules/util_logger.md)
+- [business/service/app-flow](business/service/app-flow/README.md)
+- [business/service/life-cycle](business/service/life-cycle/README.md)
+- [controller/app-starter](controller/app-starter/README.md)
+- [index](index/README.md)
+- [util/logger](util/logger/README.md)

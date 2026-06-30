@@ -10,6 +10,7 @@
 		"esModuleInterop": false,
 		"experimentalDecorators": true,
 		"forceConsistentCasingInFileNames": true,
+		"ignoreDeprecations": "6.0",
 		"inlineSourceMap": true,
 		"inlineSources": true,
 		"lib": [
@@ -48,7 +49,10 @@
 		"strictFunctionTypes": true,
 		"strictNullChecks": true,
 		"target": "ESNext",
-		"traceResolution": false
+		"traceResolution": false,
+		"types": [
+			"node"
+		]
 	},
 	"include": [
 		"./*.*",

@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.5...v2.0.0) (2026-06-30)
+
+
+### Code Refactoring
+
+* remove babel build pipeline and rewrite readme ([#76](https://github.com/beecode-rs/msh-app-boot/issues/76)) ([4704253](https://github.com/beecode-rs/msh-app-boot/commit/47042538267522afbc2cdbd986a8f7e98c4d7a52))
+
+
+### BREAKING CHANGES
+
+* the babel build pipeline has been removed in favor of
+the typescript compiler. projects consuming this package must migrate
+off babel: drop @babel dev dependencies, remove babel.config.cjs, and
+no longer rely on ts-node/tsc-alias for builds. node >= v22.22.1 is
+now required.
+
 ## [1.1.5](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.4...v1.1.5) (2026-02-16)
 
 

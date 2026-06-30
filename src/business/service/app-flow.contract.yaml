@@ -1,0 +1,47 @@
+# Only the static methods (DeepExecFlowList, ExecSyncFlowList) are covered.
+# AppFlow is an abstract class with a protected constructor; the instance methods
+# create()/destroy() and the LifeCycle/AppStarter classes are side-effect driven
+# and stay in Vitest (*.test.ts).
+#
+# The fixtures (see __fixtures__/app-flow-fixtures.ts) make the wrong direction
+# reject, so each term verifies create-vs-destroy dispatch, not merely "does not
+# throw". Async rejections cannot be expressed as a contract result, so the
+# error/log path remains in Vitest.
+subject: AppFlow
+module: ./app-flow.js
+subjectType: function
+methods:
+  DeepExecFlowList:
+    terms:
+      - description: empty flow list resolves without invoking anything
+        params:
+          - flowList: []
+            direction: destroy
+        result: !undefined
+      - description: single entity, direction create, invokes create
+        params:
+          - flowList:
+              - __import__:./__fixtures__/app-flow-fixtures.js:createLifeCycle
+            direction: create
+        result: !undefined
+      - description: entity plus parallel group, direction destroy, invokes destroy on all
+        params:
+          - flowList:
+              - __import__:./__fixtures__/app-flow-fixtures.js:destroyLifeCycle
+              - - __import__:./__fixtures__/app-flow-fixtures.js:destroyLifeCycle
+                - __import__:./__fixtures__/app-flow-fixtures.js:destroyLifeCycle
+            direction: destroy
+        result: !undefined
+  ExecSyncFlowList:
+    terms:
+      - description: empty list resolves immediately
+        params:
+          - []
+          - destroy
+        result: !undefined
+      - description: group runs destroy in parallel on every entity
+        params:
+          - - __import__:./__fixtures__/app-flow-fixtures.js:destroyLifeCycle
+            - __import__:./__fixtures__/app-flow-fixtures.js:destroyLifeCycle
+          - destroy
+        result: !undefined

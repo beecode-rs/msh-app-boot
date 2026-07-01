@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/beecode-rs/msh-app-boot/compare/v2.0.0...v2.0.1) (2026-07-01)
+
+
+### Bug Fixes
+
+* update dependencies ([a99fca6](https://github.com/beecode-rs/msh-app-boot/commit/a99fca66c9edbfdd04fdb796bd8e53f2172f0182))
+
 # [2.0.0](https://github.com/beecode-rs/msh-app-boot/compare/v1.1.5...v2.0.0) (2026-06-30)
 
 

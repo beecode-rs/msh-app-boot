@@ -88,15 +88,15 @@
 		}
 	},
 	"dependencies": {
-		"@beecode/msh-config": "^1.2.0",
+		"@beecode/msh-config": "^1.2.2",
 		"@beecode/msh-logger": "^2.0.0"
 	},
 	"devDependencies": {
-		"@beecode/msh-test-contractor": "^1.0.0",
+		"@beecode/msh-test-contractor": "^1.0.1",
 		"@commitlint/cli": "^21.2.0",
 		"@commitlint/config-conventional": "^21.2.0",
 		"@commitlint/prompt": "^21.2.0",
-		"@types/node": "^26.0.1",
+		"@types/node": "^26.1.0",
 		"@vitest/coverage-v8": "^4.1.9",
 		"commitizen": "^4.3.2",
 		"concurrently": "^10.0.3",

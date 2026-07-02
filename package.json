@@ -89,10 +89,10 @@
 	},
 	"dependencies": {
 		"@beecode/msh-config": "^1.2.2",
-		"@beecode/msh-logger": "^2.0.0"
+		"@beecode/msh-logger": "^2.0.2"
 	},
 	"devDependencies": {
-		"@beecode/msh-test-contractor": "^1.0.1",
+		"@beecode/msh-test-contractor": "^1.0.2",
 		"@commitlint/cli": "^21.2.0",
 		"@commitlint/config-conventional": "^21.2.0",
 		"@commitlint/prompt": "^21.2.0",

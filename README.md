@@ -76,32 +76,42 @@ App-boot is built on three composable primitives:
 - **`AppFlow`** — the orchestrator. You pass it a `FlowList` — a list where each entry is either a single `LifeCycle` (run on its own) or an array of `LifeCycle`s (run together). On `create()` the list is executed **in order**: each top-level entry is awaited before the next, while the items inside an array entry run **in parallel** (`Promise.all`) and are all awaited before moving on. On `destroy()` the same logic runs against `_destroyFn`, but the **top-level** list is reversed first — so dependencies that started last stop first.
 - **`AppStarter`** — the runner. `start()` calls `AppFlow.create()` and registers `SIGTERM`/`SIGINT` handlers that trigger a graceful `stop()` (which calls `destroy()`) before exiting. If `create()` throws, the error is logged, the app is stopped, and the process exits with code `1`.
 
-```plantuml
-@startuml
-class LifeCycle {
-  + name: string
-  # _createFn(): Promise<T>
-  # _destroyFn(): Promise<T>
-  + create(): Promise<T>
-  + destroy(): Promise<T>
-}
+```mermaid
+classDiagram
+    class LifeCycle {
+        +string name
+        #_createFn() Promise~T~
+        #_destroyFn() Promise~T~
+        +create() Promise~T~
+        +destroy() Promise~T~
+    }
 
-abstract class AppFlow {
-  # _flowList: FlowList
-  + create(): Promise<void>
-  + destroy(): Promise<void>
-}
+    class AppFlow {
+        <<abstract>>
+        #FlowList _flowList
+        +create() Promise~void~
+        +destroy() Promise~void~
+    }
 
-class AppStarter {
-  - _flow: AppFlow
-  + start(): Promise<void>
-  + stop(): Promise<void>
-}
+    class AppStarter {
+        -AppFlow _flow
+        +start() Promise~void~
+        +stop() Promise~void~
+    }
 
-AppFlow o-- LifeCycle : FlowList = (LifeCycle | LifeCycle[])[]
-AppStarter --> AppFlow : runs
-@enduml
+    AppFlow o-- LifeCycle : FlowList
+    AppStarter --> AppFlow : runs
 ```
+
+The two animations below show the flow in action, using a `ServerApp` composed as `new ServerApp(commonLib, [typeorm, rxjsBus], aws, express)`.
+
+**Create**: units start in list order; the array entry `[typeorm, rxjsBus]` runs in parallel (`Promise.all`):
+
+![Animation of the create pipeline: Common Lib Setup completes first, then TypeORM and RXJS Event Bus start together, then AWS, and finally Express](resource/media/pipeline-create.gif)
+
+**Destroy**: `stop()` disposes the same units in reverse order:
+
+![Animation of the teardown pipeline: Express stops first, then AWS, then TypeORM and RXJS Event Bus stop together, and finally Common Lib Setup](resource/media/pipeline-teardown.gif)
 
 ### Project Structure
 

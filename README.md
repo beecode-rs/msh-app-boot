@@ -107,11 +107,11 @@ The two animations below show the flow in action, using a `ServerApp` composed a
 
 **Create**: units start in list order; the array entry `[typeorm, rxjsBus]` runs in parallel (`Promise.all`):
 
-![Animation of the create pipeline: Common Lib Setup completes first, then TypeORM and RXJS Event Bus start together, then AWS, and finally Express](resource/media/pipeline-create.gif)
+![Animation of the create pipeline: Common Lib Setup completes first, then TypeORM and RXJS Event Bus start together, then AWS, and finally Express](resource/media/create.gif)
 
 **Destroy**: `stop()` disposes the same units in reverse order:
 
-![Animation of the teardown pipeline: Express stops first, then AWS, then TypeORM and RXJS Event Bus stop together, and finally Common Lib Setup](resource/media/pipeline-teardown.gif)
+![Animation of the teardown pipeline: Express stops first, then AWS, then TypeORM and RXJS Event Bus stop together, and finally Common Lib Setup](resource/media/teardown.gif)
 
 ### Project Structure
 
